@@ -1,0 +1,115 @@
+
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,600);
+@import url(https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+.intro-box {
+	height: 1200px;
+	background-image: url('../images/lisbon_sunset_01.jpg');
+	background-position: center top;
+	background-repeat: no-repeat;
+	//background-size: 100%; //to apply to larger displays with media queries
+
+	.title-bar {
+		height: 100px;
+		padding-top: 100px;
+		.brand {
+			display: inline-block;
+			width: 49%;
+			height: 100px;
+			text-align: center;
+			vertical-align: middle;
+			.brand-logo {
+				height: inherit;
+			}
+		}
+
+		.menu {
+			display: inline-block;
+			text-align: center;
+			margin-left: 32px;
+			.menu-item {
+				border: 1px solid #ffffff;
+				margin: 16px 16px;
+				padding: 12px 24px;
+				vertical-align: middle;
+				text-decoration: inherit;
+				.menu-label {
+					font: 100 24px/24px 'Work Sans', sans-serif;
+					color: #ffffff;
+					vertical-align: middle;
+				}
+				&:hover {
+					background-color: #fafafa;
+					.menu-label {
+						color: #4d7da3;
+					}
+				}
+			}
+		}
+	}
+
+	.welcome-section {
+		margin-top: 450px;
+		.welcome-area {
+			width: 1000px;
+			min-height: 200px;
+			margin: 0 auto;
+			background-color: rgba(0,0,0,0.6);
+		}
+		.photo-area {
+			display: inline-block;
+			width: 25%;
+			vertical-align: middle;
+			.photo {
+				margin: auto auto;
+				background-image: url('../images/diogo.jpg');
+				background-repeat: no-repeat;
+				background-size: 110% 110%;
+				background-position: center;
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65);
+				-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65);
+				box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65);
+				.photo-frame {
+					height: inherit;
+					border-radius: inherit;
+					background: rgba(0,0,0,0);
+					background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.75) 100%);
+					background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,0)), color-stop(80%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0.75)));
+					background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.75) 100%);
+					background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.75) 100%);
+					background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.75) 100%);
+					background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.75) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+				}
+			}
+		}
+		.message-area{
+			display: inline-block;
+			width: 70%;
+			vertical-align: middle;
+			margin: 25px 0;
+			.quotes{
+				display: inline-block;
+				font-style: italic;
+				font-size: 36px;
+				color: #ffffff;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.welcome-message {
+				display: inline;
+				font: italic 300 20px/28px 'Dosis', sans-serif;
+				color: #ffffff;
+				vertical-align: bottom;
+			}
+		}
+	}
+}
