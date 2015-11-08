@@ -16,10 +16,13 @@ html,body {
 
 	.title-bar {
 		height: 100px;
-		padding-top: 100px;
+		width: 1440px;
+		margin: 0 auto;
+		position: relative;
+		top: 100px;
 		.brand {
 			display: inline-block;
-			width: 49%;
+			margin: 0 50px;
 			height: 100px;
 			text-align: center;
 			vertical-align: middle;
@@ -30,11 +33,10 @@ html,body {
 
 		.menu {
 			display: inline-block;
-			text-align: center;
-			margin-left: 32px;
+			margin-left: 100px;
 			.menu-item {
 				border: 1px solid #ffffff;
-				margin: 16px 16px;
+				margin: 16px;
 				padding: 12px 24px;
 				vertical-align: middle;
 				text-decoration: inherit;
@@ -54,7 +56,7 @@ html,body {
 	}
 
 	.welcome-section {
-		margin-top: 450px;
+		margin-top: 650px;
 		.welcome-area {
 			width: 1000px;
 			min-height: 200px;
