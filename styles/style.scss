@@ -336,5 +336,21 @@ html,body {
 	.direction-r .desc {
 		margin: 1em 0 0 0.75em;
 	}
-
 }
+
+#contacts-map {
+	height:800px;
+	width: 100%;
+}
+.gm-style-iw * {
+	display: block;
+	width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+	margin: 0;
+	padding: 0;
+}
+.gm-style-iw a {
+	color: #4272db;
+}
+	
