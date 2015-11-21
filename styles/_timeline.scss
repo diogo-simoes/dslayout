@@ -1,0 +1,236 @@
+
+$font_family: 'Arial', sans-serif !default;
+
+@mixin box-shadow ($shadows...) {
+	-webkit-box-shadow: $shadows;
+	-moz-box-shadow: $shadows;
+	box-shadow: $shadows;
+}
+
+@mixin timeline-gradient ($base_color) {
+	background: rgba($base_color, 1.0); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,0.0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba($base_color,0.0)), color-stop(8%, rgba($base_color,1.0)), color-stop(92%, rgba($base_color,1.0)), color-stop(100%, rgba($base_color,0.0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,0.0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,0.0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,0.0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,0.0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='ie-hex-str($base_color)', endColorstr='ie-hex-str(rgba($base_color,0.0))',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin bottom-timeline-gradient ($base_color) {
+	background: rgba($base_color, 1.0); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,1.0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba($base_color,0.0)), color-stop(8%, rgba($base_color,1.0)), color-stop(92%, rgba($base_color,1.0)), color-stop(100%, rgba($base_color,1.0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,1.0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,1.0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,1.0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba($base_color,0.0) 0%, rgba($base_color,1.0) 8%, rgba($base_color,1.0) 92%, rgba($base_color,1.0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='ie-hex-str($base_color)', endColorstr='ie-hex-str(rgba($base_color,0.0))',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin timeline {
+	.timeline-section {
+		margin-top: 100px;
+		padding: 60px 0 120px 0;
+		background: #e6e6e6;
+		color: #4479ac;
+		font-family: $font_family;
+		font-size: 112.5%;
+		line-height: 1.6em;
+
+		.time-lapse {
+			margin: 40px auto;
+			text-align: center;
+		    font: 400 60px/60px $font_family;
+		    color: #4479ac;
+		    height: 60px;
+		}
+
+		.timeline {
+			position: relative;
+			width: 660px;
+			margin: 0 auto;
+			margin-top: 20px;
+			padding: 1em 0;
+			list-style-type: none;
+		}
+
+		.timeline:before {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			content: ' ';
+			display: block;
+			width: 10px;
+			height: 100%;
+			margin-left: -5px;
+			@include timeline-gradient(#4479ac);
+			z-index: 5;
+		}
+
+		.last-timeline:before {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			content: ' ';
+			display: block;
+			width: 10px;
+			height: 100%;
+			margin-left: -5px;
+			@include bottom-timeline-gradient(#4479ac);
+			z-index: 5;
+		}
+
+		.last-timeline:after {
+			position: absolute;
+			left: 50%;
+			bottom: -58px;
+			content: 'Now';
+			background: #e6e6e6;
+			width: 45px;
+			height: 45px;
+			border-radius: 45px;
+			line-height: 45px;
+			margin-left: -31.5px;
+			z-index: 15;
+			border: solid 5px;
+			padding: 4px;
+			text-align: center;
+		}
+
+		.timeline li {
+			padding: 2em 0;
+		}
+
+		.timeline li:after {
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		.direction-l {
+			position: relative;
+			width: 300px;
+			float: left;
+			text-align: right;
+		}
+
+		.direction-r {
+			position: relative;
+			width: 300px;
+			float: right;
+		}
+
+		.flag-wrapper {
+			position: relative;
+			display: inline-block;
+			
+			text-align: center;
+		}
+
+		.flag {
+			position: relative;
+			display: inline;
+			background: rgb(248,248,248);
+			padding: 6px 10px;
+			border-radius: 5px;
+			
+			font-weight: 600;
+			text-align: left;
+		}
+
+		.direction-l .flag {
+			@include box-shadow(-1px 1px 1px rgba(0,0,0,0.15) 0 0 1px rgba(0,0,0,0.15));
+		}
+
+		.direction-r .flag {
+			@include box-shadow(1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15));
+		}
+
+		.direction-l .flag:before,
+		.direction-r .flag:before {
+			position: absolute;
+			top: 50%;
+			right: -42px;
+			content: ' ';
+			display: block;
+			width: 24px;
+			height: 24px;
+			margin-top: -10px;
+			background: #4174a4;
+			border-radius: 24px;
+			@include box-shadow(0px 0px 20px 0px rgba(49, 88, 124, 0.8));
+			z-index: 10;
+		}
+
+		.direction-r .flag:before {
+			left: -42px;
+		}
+
+		.direction-l .flag:after {
+			content: "";
+			position: absolute;
+			left: 100%;
+			top: 50%;
+			height: 0;
+			width: 0;
+			margin-top: -8px;
+			border: solid transparent;
+			border-left-color: rgb(248,248,248);
+			border-width: 8px;
+			pointer-events: none;
+		}
+
+		.direction-r .flag:after {
+			content: "";
+			position: absolute;
+			right: 100%;
+			top: 50%;
+			height: 0;
+			width: 0;
+			margin-top: -8px;
+			border: solid transparent;
+			border-right-color: rgb(248,248,248);
+			border-width: 8px;
+			pointer-events: none;
+		}
+
+		.time-wrapper {
+			display: inline;
+			
+			line-height: 1em;
+			font-size: 0.66666em;
+			color: rgb(250,80,80);
+			vertical-align: middle;
+		}
+
+		.direction-l .time-wrapper {
+			float: left;
+		}
+
+		.direction-r .time-wrapper {
+			float: right;
+		}
+
+		.time {
+			display: inline-block;
+			padding: 4px 6px;
+			background: rgb(248,248,248);
+		}
+
+		.desc {
+			margin: 1em 0.75em 0 0;
+			
+			font-size: 0.77777em;
+			font-style: italic;
+			line-height: 1.5em;
+		}
+
+		.direction-r .desc {
+			margin: 1em 0 0 0.75em;
+		}
+	}
+}
