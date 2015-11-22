@@ -32,6 +32,13 @@ $font_family: 'Work Sans', sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='ie-hex-str($base_color)', endColorstr='ie-hex-str($base_color)', GradientType=1 ); /* IE6-9 */
 }
 
+@mixin placeholder-icon {
+	&::-webkit-input-placeholder::before {@content}
+	&:-moz-placeholder::before           {@content}
+	&::-moz-placeholder::before          {@content}
+	&:-ms-input-placeholder::before      {@content}  
+}
+
 html,body {
 	margin: 0;
 	padding: 0;
@@ -139,20 +146,105 @@ html,body {
 
 @include timeline;
 
-//Google Maps styling
-#contacts-map {
+.contacts-area {
 	height:800px;
-	width: 100%;
-}
-.gm-style-iw * {
-	display: block;
-	width: 100%;
-}
-.gm-style-iw h4, .gm-style-iw p {
-	margin: 0;
-	padding: 0;
-}
-.gm-style-iw a {
-	color: #4272db;
+	//Google Maps styling
+	#contacts-map {
+		height:800px;
+		width: 100%;
+	}
+	.gm-style-iw * {
+		display: block;
+		width: 100%;
+	}
+	.gm-style-iw h4, .gm-style-iw p {
+		margin: 0;
+		padding: 0;
+	}
+	.gm-style-iw a {
+		color: #4272db;
+	}
+	.contact-panel {
+		position: relative;
+		top: -650px;
+		left: 50%;
+		margin-left: -500px;
+		width: 500px;
+		display: block;
+		#contact-form {
+			display: inline-block;
+			padding: 20px;
+			border: solid 1px #e6e6e6;
+			border-radius: 2px;
+			background-color: rgba(250,250,250,0.9);
+			.contact-message {
+				font: 500 16px $font_family;
+				margin-bottom: 10px;
+				color: #656565;
+			}
+			.contact-textfield {
+				display: inline-block;
+				font: 400 12px $font_family;
+				margin-bottom: 8px;
+				width: 100%;
+				height: 30px;
+				border: solid 1px #e0e0e0;
+				box-sizing: border-box;
+				padding: 0 12px;
+			}
+			.name-textfield {
+				@extend .contact-textfield;
+				@include placeholder-icon {
+					font-family: 'entypo';
+					content: '\ea91';
+					margin-right: 6px;
+				}
+			}
+			.email-textfield {
+				@extend .contact-textfield;
+				@include placeholder-icon {
+					font-family: 'entypo';
+					content: '\e9d5';
+					margin-right: 6px;
+				}
+			}
+			.subject-textfield {
+				@extend .contact-textfield;
+				@include placeholder-icon {
+					font-family: 'entypo';
+					content: '\e97d';
+					margin-right: 6px;
+				}
+			}
+			.contact-textarea {
+				display: inline-block;
+				font: 400 12px $font_family;
+				margin-bottom: 10px;
+				width: 100%;
+				resize: none;
+				border: solid 1px #e0e0e0;
+				box-sizing: border-box;
+				padding: 12px;
+				@include placeholder-icon {
+					font-family: 'entypo';
+					content: '\ea3e';
+					margin-right: 6px;
+				}
+			}
+			.contact-submit {
+				font: 300 14px/18px $font_family;
+				color: darken(#ffffff, 10%);
+				background-color: lighten(#4479ac, 10%);
+				border: none;
+				padding: 6px 12px;
+				float: right;
+				@include clickable;
+				&:hover {
+					background-color: #4479ac;
+					color: #ffffff;
+				}
+			}
+		}
+	}
 }
 	

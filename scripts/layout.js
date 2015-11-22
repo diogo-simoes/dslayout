@@ -10,8 +10,8 @@ google.maps.event.addDomListener(window, 'load', init);
 var map;
 function init() {
 	var mapOptions = {
-		center: new google.maps.LatLng(38.734500,-9.145100),
-		zoom: 13,
+		center: new google.maps.LatLng(38.755300,-9.099500),
+		zoom: 18,
 		zoomControl: true,
 		zoomControlOptions: {
 			style: google.maps.ZoomControlStyle.SMALL,
