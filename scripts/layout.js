@@ -93,6 +93,8 @@ function init() {
 			};
 		}());
 		iw = new google.maps.InfoWindow();
+		/*
+		 * Uncomment this if you want the info window to show
 		google.maps.event.addListener(marker, 'click', function() {
 			if (infoWindowVisible()) {
 				iw.close();
@@ -110,5 +112,6 @@ function init() {
 		google.maps.event.addListener(iw, 'closeclick', function () {
 			infoWindowVisible(false);
 		});
+		*/
 	}
 }
