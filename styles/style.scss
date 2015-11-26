@@ -225,24 +225,51 @@ html,body {
 				padding: 50px 100px;
 				box-sizing: border-box;
 				.profile-entry{
+					margin-bottom: 10px;
 					p {
 						margin: 0 auto;
 					}
+				}
+				#profile-name {
+					font: 600 16px $font_family;
 				}
 				#profile-address{
 					&:before {
 						font-family: 'entypo';
 						content: '\e954';
-						margin-left: -22px;
-						margin-right: 6px;
+						margin-left: -26px;
+						margin-right: 9px;
+						vertical-align: middle;
 					}
 				}
 				#profile-mobile{
 					&:before {
 						font-family: 'entypo';
 						content: '\ea2b';
-						margin-left: -22px;
-						margin-right: 6px;
+						margin-left: -26px;
+						margin-right: 10px;
+						vertical-align: middle;
+					}
+				}
+				#profile-skype{
+					&:before {
+						font-family: 'FontAwesome';
+						content: '\f17e';
+						margin-left: -25px;
+						margin-right: 13px;
+						vertical-align: middle;
+					}
+				}
+				#profile-gmail{
+					i {
+						vertical-align: middle;
+					}
+					&:before {
+						font-family: 'FontAwesome';
+						content: '\f0d5';
+						margin-left: -26px;
+						margin-right: 8px;
+						vertical-align: middle;
 					}
 				}
 			}

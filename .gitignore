@@ -2,3 +2,4 @@ images/*
 styles/*.sass-cache*
 styles/*.sassbuilder*
 styles/*.css*
+.DS_Store
