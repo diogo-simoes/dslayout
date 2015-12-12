@@ -122,19 +122,16 @@
 			<div class="contacts-window">
 				<div class="contacts-menu">
 					<ul>
-						<li class="active"><i class="et-location-pin"></i></li>
-						<li><i class="et-mail"></i></li>
-						<li><i class="fa fa-twitter"></i></li>
-						<li><i class="fa fa-linkedin"></i></li>
-						<li><i class="fa fa-github"></i></li>
-						<li><i class="fa fa-bitbucket"></i></li>
+						<li id="profile-menu" class="active contacts-menu"><i class="et-location-pin"></i></li>
+						<li id="email-menu" class="contacts-menu"><i class="et-mail"></i></li>
+						<li id="social-media-menu" class="contacts-menu"><i class="et-grid"></i></li>
 					</ul>
 				</div>
 				<div class="contacts-panel">
 					<div class="contacts-profile">
 						<div class="profile-entry" id="profile-name">Diogo Simões</div>
-						<div class="profile-entry" id="profile-address">Rua Gaivotas em Terra, 10 - 1B<p>1990-601 Lisboa</p><p>Portugal</p></div>
-						<div class="profile-entry" id="profile-mobile">(+351) 91 536 7007</div>
+						<div class="profile-entry" id="profile-address">Lisboa - Portugal</div>
+						<div class="profile-entry" id="profile-mobile">(351) 91 536 7007</div>
 						<div class="profile-entry" id="profile-skype">skype.user.name</div>
 						<div class="profile-entry" id="profile-gmail">user.name<i class="et-email"></i>gmail.com</div>
 					</div><!--
@@ -142,11 +139,19 @@
 						<form id="contact-form">
 							<div class="contact-message">Feel free to say hi.</div>
 							<input type="text" class="name-textfield" placeholder="Your name">
-							<input type="text" class="email-textfield" placeholder="Email">
+							<input type="text" class="email-textfield" placeholder="Your email">
 							<input type="text" class="subject-textfield" placeholder="Subject">
 							<textarea form="contact-form" class="contact-textarea" rows="12" placeholder="Your message..."></textarea>
 							<input type="submit" class="contact-submit" value="Send message">
 						</form>
+					</div><!--
+					--><div class="contacts-social-media">
+						<div class="social-media-wrapper">
+							<div class="social-media-button"><i class="fa fa-twitter"></i></div><!--
+							--><div class="social-media-button"><i class="fa fa-linkedin"></i></div><!--
+							--><div class="social-media-button"><i class="fa fa-github"></i></div><!--
+							--><div class="social-media-button"><i class="fa fa-bitbucket"></i></div>
+						</div>
 					</div>
 				</div>
 			</div>

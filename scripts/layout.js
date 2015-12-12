@@ -1,7 +1,26 @@
 
 
 $( document ).ready( function () {
+	var changeContactsPanelContent = function (activeId, phase) {
+		if ($('#'+activeId).hasClass('active')) {
+			return;
+		}
+		$('.contacts-menu').removeClass('active');
+		$('#'+activeId).addClass('active');
+		$('.contacts-panel').animate({'margin-left': phase});
+	};
 
+	$('#profile-menu').click( function () {
+		changeContactsPanelContent('profile-menu',0);
+	});
+
+	$('#email-menu').click( function () {
+		changeContactsPanelContent('email-menu',-400);
+	});
+
+	$('#social-media-menu').click( function () {
+		changeContactsPanelContent('social-media-menu',-800);
+	});
 });
 
 
@@ -10,8 +29,8 @@ google.maps.event.addDomListener(window, 'load', init);
 var map;
 function init() {
 	var mapOptions = {
-		center: new google.maps.LatLng(38.755300,-9.099500),
-		zoom: 18,
+		center: new google.maps.LatLng(38.71300,-9.195500),
+		zoom: 12,
 		zoomControl: true,
 		zoomControlOptions: {
 			style: google.maps.ZoomControlStyle.SMALL,
@@ -61,7 +80,7 @@ function init() {
 	var mapElement = document.getElementById('contacts-map');
 	var map = new google.maps.Map(mapElement, mapOptions);
 	var locations = [
-			['I\'m here!', 'undefined', 'undefined', 'undefined', 'undefined', 38.755953883962974, -9.098895203041138, 'images/mapicon58.png']
+			['I\'m here!', 'undefined', 'undefined', 'undefined', 'undefined', 38.725953883962974, -9.138895203041138, 'images/mapicon58.png']
 	];
 	for (i = 0; i < locations.length; i++) {
 		if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
