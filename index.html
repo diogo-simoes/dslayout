@@ -14,17 +14,36 @@
 		<script type="text/javascript" src="scripts/layout.js"></script>
 	</head>
 
-	<body>		
-		<div class="intro-section">
+	<body>
+		<div id="static-title-bar" class="static-title-bar">
+			<div class="brand">
+				<img src="images/title-banner.png" class="brand-logo" alt="Diogo Simoes"></img>
+			</div><!--
+			--><div class="menu">
+				<a class="menu-item" href="#intro-section">
+					<span class="menu-label">Home</span>
+				</a>
+				<a class="menu-item" href="#contacts-section">
+					<span class="menu-label">Contacts</span>
+				</a>
+				<a class="menu-item" href="#">
+					<span class="menu-label">Blog</span>
+				</a>
+				<a class="menu-item" href="#">
+					<span class="menu-label">Lab</span>
+				</a>
+			</div>
+		</div>
+		<div id="intro-section" class="intro-section">
 			<div class="title-bar">
 				<div class="brand">
 					<img src="images/title-banner.png" class="brand-logo" alt="Diogo Simoes"></img>
 				</div>
 				<div class="menu">
-					<a class="menu-item" href="#">
+					<a class="menu-item" href="#intro-section">
 						<span class="menu-label">Home</span>
 					</a>
-					<a class="menu-item" href="#">
+					<a class="menu-item" href="#contacts-section">
 						<span class="menu-label">Contacts</span>
 					</a>
 					<a class="menu-item" href="#">
@@ -52,72 +71,46 @@
 			</div>
 		</div>
 		<div class="timeline-section">
-			<div class="time-lapse">
-				<i class="et-dots-three-vertical"></i>
-			</div>
 			<ul class="timeline">
 				<li>
-					<div class="direction-r">
-						<div class="flag-wrapper">
-							<span class="flag">Freelancer</span>
-							<span class="time-wrapper"><span class="time">2013 - present</span></span>
-						</div>
-						<div class="desc">My current employment. Way better than the position before!</div>
-					</div>
-				</li>
-				<li>
 					<div class="direction-l">
 						<div class="flag-wrapper">
-							<span class="flag">Cool Breeze Inc.</span>
-							<span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+							<span class="flag">Técnico Lisboa</span>
+							<span class="time-wrapper"><span class="time">2004 - 2007</span></span>
 						</div>
-						<div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
+						<div class="desc">Graduated from Instituto Superior Técnico. Earned my BSc. in Computer Science.</div>
 					</div>
 				</li>
 				<li>
 					<div class="direction-r">
 						<div class="flag-wrapper">
 							<span class="flag">Técnico Lisboa</span>
-							<span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+							<span class="time-wrapper"><span class="time">2007 - 2009</span></span>
 						</div>
-						<div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
-					</div>
-				</li>
-			</ul>
-			<div class="time-lapse">
-				<i class="et-dots-three-vertical"></i>
-			</div>
-			<ul class="last-timeline timeline">
-				<li>
-					<div class="direction-r">
-						<div class="flag-wrapper">
-							<span class="flag">Freelancer</span>
-							<span class="time-wrapper"><span class="time">2013 - present</span></span>
-						</div>
-						<div class="desc">My current employment. Way better than the position before!</div>
+						<div class="desc">Graduated from Instituto Superior Técnico. Earned my Master's Degree in Software Engineering.</div>
 					</div>
 				</li>
 				<li>
 					<div class="direction-l">
 						<div class="flag-wrapper">
-							<span class="flag">Cool Breeze Inc.</span>
-							<span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+							<span class="flag">Técnico Lisboa</span>
+							<span class="time-wrapper"><span class="time">2009 - 2013</span></span>
 						</div>
-						<div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
+						<div class="desc">Joined the FenixEdu project, an Academic Management System developed in-house.</div>
 					</div>
 				</li>
 				<li>
 					<div class="direction-r">
 						<div class="flag-wrapper">
-							<span class="flag">Técnico Lisboa</span>
-							<span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+							<span class="flag">Quorum Born IT</span>
+							<span class="time-wrapper"><span class="time">2013 - present</span></span>
 						</div>
-						<div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+						<div class="desc">Reinforced qubIT's team to work on their own flavor of FenixEdu.</div>
 					</div>
 				</li>
 			</ul>
 		</div>
-		<div class="contacts-area">
+		<div id="contacts-section" class="contacts-area">
 			<div id='contacts-map'></div>
 			<div class="contacts-window">
 				<div class="contacts-menu">

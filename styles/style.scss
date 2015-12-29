@@ -21,6 +21,21 @@ $font_family: 'Work Sans', sans-serif;
 	box-shadow: $shadows;
 }
 
+@mixin keyframes ($animation_name) {
+	@-webkit-keyframes #{$animation_name} {@content;}
+	@-moz-keyframes #{$animation_name} {@content;}
+	@-ms-keyframes #{$animation_name} {@content;}
+	@-o-keyframes #{$animation_name} {@content;}
+	@keyframes #{$animation_name} {@content;}
+}
+
+@mixin animation ($animations...) {
+	-webkit-animation: $animations;
+ 	-moz-animation:    $animations;
+ 	-o-animation:      $animations;
+ 	animation:         $animations;
+}
+
 @mixin photo-gradient ($base_color) {
 	background: rgba($base_color, 0.0); /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover, rgba($base_color,0.0) 0%, rgba($base_color,0.0) 50%, rgba($base_color,0.5) 80%, rgba($base_color,0.75) 100%); /* FF3.6+ */
@@ -42,6 +57,47 @@ $font_family: 'Work Sans', sans-serif;
 html,body {
 	margin: 0;
 	padding: 0;
+}
+
+.static-title-bar {
+	position: fixed;
+	top: 0;
+	display: none;
+	z-index: 20;
+	width: 100%;
+	height: 40px;
+	background-color: rgba(#0f1a24, 0.80);
+	.brand {
+		display: inline-block;
+		height: 30px;
+		width: 40%;
+		text-align: right;
+		vertical-align: middle;
+		.brand-logo {
+			height: inherit;
+		}
+	}
+
+	.menu {
+		display: inline-block;
+		margin-left: 50px;
+		height: 100%;
+		.menu-item {
+			height: 100%;
+			padding: 0 8px;
+			display: inline-block;
+			vertical-align: middle;
+			text-decoration: inherit;
+			.menu-label {
+				font: 200 18px/40px $font_family;
+				color: #ffffff;
+				vertical-align: middle;
+			}
+			&:hover {
+				background-color: #4479ac;
+			}
+		}
+	}
 }
 
 .intro-section {
@@ -85,7 +141,7 @@ html,body {
 				&:hover {
 					background-color: #fafafa;
 					.menu-label {
-						color: #4d7da3;
+						color: #4479ac;
 					}
 				}
 			}
@@ -372,6 +428,17 @@ html,body {
 						&:hover {
 							background-color: darken(#4479ac, 10%);
 							color: #ffffff;
+							border-radius: 40px;
+							@include keyframes('roundify') {
+								from {border-radius: 0px;}
+								to {border-radius: 40px;}
+							}
+							@include keyframes('pulse') {
+								0% {width:80px;height:80px;margin:10px;line-height: 80px;background-color: darken(#4479ac, 10%)}
+								60% {width:70px;height:70px;margin:15px;line-height: 70px;background-color: lighten(#4479ac, 10%)}
+								100% {width:80px;height:80px;margin:10px;line-height: 80px;background-color: darken(#4479ac, 10%)}
+							}
+							@include animation(roundify ease-out 300ms, pulse ease-in 500ms);
 						}
 					}
 				}
@@ -379,4 +446,3 @@ html,body {
 		}
 	}
 }
-	

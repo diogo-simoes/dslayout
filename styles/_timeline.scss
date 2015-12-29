@@ -33,7 +33,7 @@ $font_family: 'Arial', sans-serif !default;
 	.timeline-section {
 		margin-top: 100px;
 		padding: 60px 0 120px 0;
-		background: #e6e6e6;
+		background: #ffffff;
 		color: #4479ac;
 		font-family: $font_family;
 		font-size: 112.5%;
@@ -67,36 +67,6 @@ $font_family: 'Arial', sans-serif !default;
 			margin-left: -5px;
 			@include timeline-gradient(#4479ac);
 			z-index: 5;
-		}
-
-		.last-timeline:before {
-			position: absolute;
-			left: 50%;
-			top: 0;
-			content: ' ';
-			display: block;
-			width: 10px;
-			height: 100%;
-			margin-left: -5px;
-			@include bottom-timeline-gradient(#4479ac);
-			z-index: 5;
-		}
-
-		.last-timeline:after {
-			position: absolute;
-			left: 50%;
-			bottom: -58px;
-			content: 'Now';
-			background: #e6e6e6;
-			width: 45px;
-			height: 45px;
-			border-radius: 45px;
-			line-height: 45px;
-			margin-left: -31.5px;
-			z-index: 15;
-			border: solid 5px;
-			padding: 4px;
-			text-align: center;
 		}
 
 		.timeline li {
@@ -134,7 +104,7 @@ $font_family: 'Arial', sans-serif !default;
 		.flag {
 			position: relative;
 			display: inline;
-			background: rgb(248,248,248);
+			background: rgb(240,240,240);
 			padding: 6px 10px;
 			border-radius: 5px;
 			
@@ -143,7 +113,7 @@ $font_family: 'Arial', sans-serif !default;
 		}
 
 		.direction-l .flag {
-			@include box-shadow(-1px 1px 1px rgba(0,0,0,0.15) 0 0 1px rgba(0,0,0,0.15));
+			@include box-shadow(-1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15));
 		}
 
 		.direction-r .flag {
@@ -179,7 +149,7 @@ $font_family: 'Arial', sans-serif !default;
 			width: 0;
 			margin-top: -8px;
 			border: solid transparent;
-			border-left-color: rgb(248,248,248);
+			border-left-color: rgb(240,240,240);
 			border-width: 8px;
 			pointer-events: none;
 		}
@@ -193,17 +163,17 @@ $font_family: 'Arial', sans-serif !default;
 			width: 0;
 			margin-top: -8px;
 			border: solid transparent;
-			border-right-color: rgb(248,248,248);
+			border-right-color: rgb(240,240,240);
 			border-width: 8px;
 			pointer-events: none;
 		}
 
 		.time-wrapper {
 			display: inline;
-			
 			line-height: 1em;
 			font-size: 0.66666em;
-			color: rgb(250,80,80);
+			font-weight: 600;
+			color: #4479ac;
 			vertical-align: middle;
 		}
 
@@ -218,7 +188,6 @@ $font_family: 'Arial', sans-serif !default;
 		.time {
 			display: inline-block;
 			padding: 4px 6px;
-			background: rgb(248,248,248);
 		}
 
 		.desc {
