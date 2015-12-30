@@ -9,6 +9,7 @@ $( document ).ready( function () {
 		if (yPos < 200 && $('#static-title-bar').is(':visible')) {
 			$('#static-title-bar').hide();
 		}
+		$('.i18n-menu').hide();
 	});
 
 	$('a[href*=#]:not([href=#])').click(function() {
@@ -21,6 +22,25 @@ $( document ).ready( function () {
 				}, 1000);
 				return false;
 			}
+		}
+	});
+
+	$('.menu-item-lang').click( function () {
+		if ($('.i18n-menu').is(':visible')) {
+			$('.i18n-menu').hide();
+		} else {
+			$('.i18n-menu').slideDown(100);
+		}
+	});
+
+	$('.language-item').click( function () {
+		$('.language-item').removeClass('picked-lang');
+		if ($(this).hasClass('portuguese')) {
+			$('.portuguese').addClass('picked-lang');
+		} else if ($(this).hasClass('english')) {
+			$('.english').addClass('picked-lang');
+		} else if ($(this).hasClass('greek')) {
+			$('.greek').addClass('picked-lang');
 		}
 	});
 

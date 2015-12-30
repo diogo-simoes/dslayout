@@ -1,10 +1,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,600);
-@import url(https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,300,700&subset=greek,latin);
 
 @import "timeline";
 
-$font_family: 'Work Sans', sans-serif;
+$font_family: 'Work Sans', 'Comfortaa', sans-serif;
 
 @mixin clickable {
 	cursor: pointer;
@@ -97,6 +97,54 @@ html,body {
 				background-color: #4479ac;
 			}
 		}
+		.menu-item-lang {
+			@include clickable;
+			margin-left: 30px;
+			.i18n-menu {
+				display: none;
+				position: absolute;
+				top: 56px;
+				margin-left: -130px;
+				background-color: rgba(#0f1a24, 0.80);
+				border-radius: 20px;
+				padding: 12px 24px;
+				.language-picker {
+					padding: 0;
+					margin: 0;
+					.language-item {
+						margin-left: 20px;
+						list-style: none;
+						display: inline-block;
+						font: 100 12px/20px 'Comfortaa', sans-serif;
+						color: #ffffff;
+						@include clickable;
+						&:first-child {
+							margin-left: 0;
+						}
+						&:hover:not(.picked-lang) {
+							border-bottom: solid 1px;
+							margin-bottom: -1px;
+						}
+						&.picked-lang {
+							font: 400 16px/20px 'Comfortaa', sans-serif;
+							cursor: default;
+						} 
+					}
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					top: -16px;
+					left: 50%;
+					margin-left: -8px;
+					width: 0; 
+					height: 0; 
+					border-left: 16px solid transparent;
+					border-right: 16px solid transparent;
+					border-bottom: 16px solid rgba(#0f1a24, 0.80);;
+				}
+			}
+		}
 	}
 }
 
@@ -107,12 +155,42 @@ html,body {
 	background-repeat: no-repeat;
 	//background-size: 100%; //to apply to larger displays with media queries
 
+	.i18n-bar {
+		height: 20px;
+		width: 1440px;
+		margin: 0 auto;
+		position: relative;
+		top: 20px;
+		.language-picker {
+			padding: 0;
+			margin: 0 0 0 50%;
+			.language-item {
+				margin-left: 20px;
+				list-style: none;
+				display: inline-block;
+				font: 100 12px/20px 'Comfortaa', sans-serif;
+				color: #ffffff;
+				@include clickable;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:hover:not(.picked-lang) {
+					border-bottom: solid 1px;
+				}
+				&.picked-lang {
+					font: 400 16px/20px 'Comfortaa', sans-serif;
+					cursor: default;
+				} 
+			}
+		}
+	}
+
 	.title-bar {
 		height: 100px;
 		width: 1440px;
 		margin: 0 auto;
 		position: relative;
-		top: 100px;
+		top: 20px;
 		.brand {
 			display: inline-block;
 			margin: 0 50px;
@@ -126,7 +204,6 @@ html,body {
 
 		.menu {
 			display: inline-block;
-			margin-left: 100px;
 			.menu-item {
 				border: 1px solid #ffffff;
 				margin: 16px;
