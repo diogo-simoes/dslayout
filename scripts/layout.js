@@ -1,6 +1,8 @@
 
-
 $( document ).ready( function () {
+
+	var i18n = new I18n();
+
 	$( window ).on('scroll', function () {
 		var yPos = window.pageYOffset;
 		if (yPos > 200 && !$('#static-title-bar').is(':visible')) {
@@ -37,10 +39,13 @@ $( document ).ready( function () {
 		$('.language-item').removeClass('picked-lang');
 		if ($(this).hasClass('portuguese')) {
 			$('.portuguese').addClass('picked-lang');
+			i18n.lang('pt');
 		} else if ($(this).hasClass('english')) {
 			$('.english').addClass('picked-lang');
+			i18n.lang('en');
 		} else if ($(this).hasClass('greek')) {
 			$('.greek').addClass('picked-lang');
+			i18n.lang('gr');
 		}
 	});
 
@@ -66,6 +71,45 @@ $( document ).ready( function () {
 	});
 });
 
+window.I18n = function (defaultLang) {
+	var lang = defaultLang || 'en';
+	this.language = lang;
+
+	(function (i18n) {
+		$.getJSON('localized-content.json', function (json) {
+			i18n.contents = json;
+			i18n.localize();
+		});
+	})(this);
+};
+
+window.I18n.prototype.hasCachedContents = function () {
+	return this.contents !== undefined;
+};
+
+window.I18n.prototype.lang = function (lang) {
+	if (typeof lang === 'string') {
+		this.language = lang;
+	}
+	this.localize();
+	return this.language;
+};
+
+window.I18n.prototype.localize = function () {
+	var contents = this.contents;
+	if (!this.hasCachedContents()) {
+		return;
+	}
+	for (var contentKey in contents) {
+		if (contents.hasOwnProperty(contentKey)) {
+			if (contents[contentKey].hasOwnProperty(this.language)) {
+				$('[data-i18n="'+contentKey+'"]').text(contents[contentKey][this.language]);
+			} else {
+				$('[data-i18n="'+contentKey+'"]').text(contents[contentKey]['en']);
+			}
+		}
+	}
+};
 
 // Google Maps Config
 google.maps.event.addDomListener(window, 'load', init);

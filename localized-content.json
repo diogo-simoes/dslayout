@@ -1,0 +1,27 @@
+{
+	"home": {
+		"pt": "Casa",
+		"en": "Home",
+		"gr": "Σπιτη"
+	},
+	"contacts": {
+		"pt": "Contactos",
+		"en": "Contacts",
+		"gr": "Κοντακτς"
+	},
+	"blog": {
+		"pt": "Blog",
+		"en": "Blog",
+		"gr": "Μπλογ"
+	},
+	"lab": {
+		"pt": "Lab",
+		"en": "Lab",
+		"gr": "Λαβ"
+	},
+	"welcome-message": {
+		"pt": "A raça dos Visigodos conquistadora das Espanhas subjugara toda a Península havia mais de um século. Nenhuma das tribos germânicas que, dividindo entre si as províncias do império dos césares, tinham tentado vestir sua bárbara nudez com os trajos despedaçados, mas esplêndidos, da civilização romana soubera como os Godos ajuntar esses fragmentos de púrpura e ouro para se compor a exemplo de povo civilizado.",
+		"en": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way.",
+		"gr": "ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον, ὃς μάλα πολλὰ πλάγχθη, ἐπεὶ Τροίης ἱερὸν πτολίεθρον ἔπερσεν: πολλῶν δ᾽ ἀνθρώπων ἴδεν ἄστεα καὶ νόον ἔγνω, πολλὰ δ᾽ ὅ γ᾽ ἐν πόντῳ πάθεν ἄλγεα ὃν κατὰ θυμόν, ἀρνύμενος ἥν τε ψυχὴν καὶ νόστον ἑταίρων. ἀλλ᾽ οὐδ᾽ ὣς ἑτάρους ἐρρύσατο, ἱέμενός περ: αὐτῶν γὰρ σφετέρῃσιν ἀτασθαλίῃσιν ὄλοντο, νήπιοι, οἳ κατὰ βοῦς Ὑπερίονος Ἠελίοιο ἤσθιον: αὐτὰρ ὁ τοῖσιν ἀφείλετο νόστιμον ἦμαρ. τῶν ἁμόθεν γε, θεά, θύγατερ Διός, εἰπὲ καὶ ἡμῖν."
+	}
+}

@@ -1,10 +1,11 @@
 
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,600);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,300,700&subset=greek,latin);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&subset=latin,greek);
 
 @import "timeline";
 
-$font_family: 'Work Sans', 'Comfortaa', sans-serif;
+$font_family: 'Work Sans', 'Roboto', sans-serif;
 
 @mixin clickable {
 	cursor: pointer;

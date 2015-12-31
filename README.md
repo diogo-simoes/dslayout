@@ -17,3 +17,9 @@
 * Desenhar home.
 * Implementar CV interactivo (formato timeline)
 * Implementar title bar flutuante
+
+
+# == Projectos Futuros == #
+
+* Transformar I18n num plugin the jQuery;
+* Criar um engine de TCG.
