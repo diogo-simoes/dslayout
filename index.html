@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Diogo Simões</title>
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+		<link rel="shortcut icon" type="image/png" href="images/favicon_raw.png"/>
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 		<link rel="stylesheet" href="icons/font-awesome-4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="icons/entypo/css/entypo.css">
@@ -21,16 +21,16 @@
 			</div><!--
 			--><div class="menu">
 				<a class="menu-item" href="#intro-section">
-					<span class="menu-label" data-i18n="home"></span>
+					<span class="menu-label" data-i18n="menu.home"></span>
 				</a>
 				<a class="menu-item" href="#contacts-section">
-					<span class="menu-label" data-i18n="contacts"></span>
+					<span class="menu-label" data-i18n="menu.contacts"></span>
 				</a>
 				<a class="menu-item" href="#">
-					<span class="menu-label" data-i18n="blog"></span>
+					<span class="menu-label" data-i18n="menu.blog"></span>
 				</a>
 				<a class="menu-item" href="#">
-					<span class="menu-label" data-i18n="lab"></span>
+					<span class="menu-label" data-i18n="menu.lab"></span>
 				</a>
 				<div class="menu-item menu-item-lang">
 					<span class="menu-label"><i class="et-language"></i></span>
@@ -58,16 +58,16 @@
 				</div>
 				<div class="menu">
 					<a class="menu-item" href="#intro-section">
-						<span class="menu-label" data-i18n="home"></span>
+						<span class="menu-label" data-i18n="menu.home"></span>
 					</a>
 					<a class="menu-item" href="#contacts-section">
-						<span class="menu-label" data-i18n="contacts"></span>
+						<span class="menu-label" data-i18n="menu.contacts"></span>
 					</a>
 					<a class="menu-item" href="#">
-						<span class="menu-label" data-i18n="blog"></span>
+						<span class="menu-label" data-i18n="menu.blog"></span>
 					</a>
 					<a class="menu-item" href="#">
-						<span class="menu-label" data-i18n="lab"></span>
+						<span class="menu-label" data-i18n="menu.lab"></span>
 					</a>
 				</div>
 			</div>
@@ -92,37 +92,37 @@
 				<li>
 					<div class="direction-l">
 						<div class="flag-wrapper">
-							<span class="flag">Técnico Lisboa</span>
-							<span class="time-wrapper"><span class="time">2004 - 2007</span></span>
+							<span class="flag" data-i18n="timeline.card001.flag"></span>
+							<span class="time-wrapper"><span class="time" data-i18n="timeline.card001.time"></span></span>
 						</div>
-						<div class="desc">Graduated from Instituto Superior Técnico. Earned my BSc. in Computer Science.</div>
+						<div class="desc" data-i18n="timeline.card001.desc"></div>
 					</div>
 				</li>
 				<li>
 					<div class="direction-r">
 						<div class="flag-wrapper">
-							<span class="flag">Técnico Lisboa</span>
-							<span class="time-wrapper"><span class="time">2007 - 2009</span></span>
+							<span class="flag" data-i18n="timeline.card002.flag"></span>
+							<span class="time-wrapper"><span class="time" data-i18n="timeline.card002.time"></span></span>
 						</div>
-						<div class="desc">Graduated from Instituto Superior Técnico. Earned my Master's Degree in Software Engineering.</div>
+						<div class="desc" data-i18n="timeline.card002.desc"></div>
 					</div>
 				</li>
 				<li>
 					<div class="direction-l">
 						<div class="flag-wrapper">
-							<span class="flag">Técnico Lisboa</span>
-							<span class="time-wrapper"><span class="time">2009 - 2013</span></span>
+							<span class="flag" data-i18n="timeline.card003.flag"></span>
+							<span class="time-wrapper"><span class="time" data-i18n="timeline.card003.time"></span></span>
 						</div>
-						<div class="desc">Joined the FenixEdu project, an Academic Management System developed in-house.</div>
+						<div class="desc" data-i18n="timeline.card003.desc"></div>
 					</div>
 				</li>
 				<li>
 					<div class="direction-r">
 						<div class="flag-wrapper">
-							<span class="flag">Quorum Born IT</span>
-							<span class="time-wrapper"><span class="time">2013 - present</span></span>
+							<span class="flag" data-i18n="timeline.card004.flag"></span>
+							<span class="time-wrapper"><span class="time" data-i18n="timeline.card004.time"></span></span>
 						</div>
-						<div class="desc">Reinforced qubIT's team to work on their own flavor of FenixEdu.</div>
+						<div class="desc" data-i18n="timeline.card004.desc"></div>
 					</div>
 				</li>
 			</ul>
@@ -147,12 +147,12 @@
 					</div><!--
 					--><div class="contacts-email">
 						<form id="contact-form">
-							<div class="contact-message">Feel free to say hi.</div>
-							<input type="text" class="name-textfield" placeholder="Your name">
-							<input type="text" class="email-textfield" placeholder="Your email">
-							<input type="text" class="subject-textfield" placeholder="Subject">
-							<textarea form="contact-form" class="contact-textarea" rows="12" placeholder="Your message..."></textarea>
-							<input type="submit" class="contact-submit" value="Send message">
+							<div class="contact-message" data-i18n="contacts.emailform.intro"></div>
+							<input type="text" class="name-textfield" data-i18n-placeholder="contacts.emailform.name">
+							<input type="text" class="email-textfield" data-i18n-placeholder="contacts.emailform.email">
+							<input type="text" class="subject-textfield" data-i18n-placeholder="contacts.emailform.subject">
+							<textarea form="contact-form" class="contact-textarea" rows="12" data-i18n-placeholder="contacts.emailform.body"></textarea>
+							<input type="submit" class="contact-submit" data-i18n-value="contacts.emailform.sendbutton">
 						</form>
 					</div><!--
 					--><div class="contacts-social-media">

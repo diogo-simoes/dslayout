@@ -1,27 +1,133 @@
 {
-	"home": {
-		"pt": "Casa",
-		"en": "Home",
-		"gr": "Σπιτη"
+	"menu" : {
+		"home" : {
+			"pt" : "Início",
+			"en" : "Home",
+			"gr" : "!!Missing!!"
+		},
+		"contacts" : {
+			"pt" : "Contactos",
+			"en" : "Contacts",
+			"gr" : "!!Missing!!"
+		},
+		"blog" : {
+			"pt" : "Blog",
+			"en" : "Blog",
+			"gr" : "!!Missing!!"
+		},
+		"lab" : {
+			"pt" : "Lab",
+			"en" : "Lab",
+			"gr" : "!!Missing!!"
+		}
 	},
-	"contacts": {
-		"pt": "Contactos",
-		"en": "Contacts",
-		"gr": "Κοντακτς"
+	"welcome-message" : {
+		"pt" : "Olá e seja bem-vindo. Eu chamo-me Diogo e sou um engenheiro de front-end web a viver em Lisboa, Portugal. Há mais de 6 anos que trabalho em web e por sentir que me faltava um meio para documentar alguns aspectos do meu trabalho, resolvi criar este site. Espero conseguir mantê-lo autêntico e fiel aos dois princípios a que nunca abnego: mestria técnica e engenho criativo.",
+		"en" : "Hello and welcome. My name is Diogo and I am a web front-end engineer from Lisbon, Portugal. Web has been my life for over 6 years now and lacking a medium to document the most interesting aspects of my daily professional life, I have decided to come forward with this site. I hope to keep it authentic and running along the two principles I cherish the most in this line of work: technical prowess and creative ingenuity.",
+		"gr" : "!!Missing!!"
 	},
-	"blog": {
-		"pt": "Blog",
-		"en": "Blog",
-		"gr": "Μπλογ"
+	"timeline" : {
+		"card001" : {
+			"flag" : {
+				"pt" : "Técnico Lisboa",
+				"en" : "Técnico Lisboa",
+				"gr" : "!!Missing!!"
+			},
+			"time" :{
+				"pt" : "2004 - 2007",
+				"en" : "2004 - 2007",
+				"gr" : "!!Missing!!"
+			},
+			"desc" : {
+				"pt" : "Obtive a minha Licenciatura em Engenharia Informática e de Computadores, no Instituto Superior Técnico.",
+				"en" : "Graduated from Instituto Superior Técnico. Earned my BSc. in Computer Science.",
+				"gr" : "!!Missing!!"
+			}
+		},
+		"card002" : {
+			"flag" : {
+				"pt" : "Técnico Lisboa",
+				"en" : "Técnico Lisboa",
+				"gr" : "!!Missing!!"
+			},
+			"time" :{
+				"pt" : "2007 - 2009",
+				"en" : "2007 - 2009",
+				"gr" : "!!Missing!!"
+			},
+			"desc" : {
+				"pt" : "Obtive o meu Mestrado em Engenharia Informática e de Computadores, no Instituto Superior Técnico.",
+				"en" : "Graduated from Instituto Superior Técnico. Earned my Master's Degree in Software Engineering.",
+				"gr" : "!!Missing!!"
+			}
+		},
+		"card003" : {
+			"flag" : {
+				"pt" : "Técnico Lisboa",
+				"en" : "Técnico Lisboa",
+				"gr" : "!!Missing!!"
+			},
+			"time" : {
+				"pt" : "2009 - 2013",
+				"en" : "2009 - 2013",
+				"gr" : "!!Missing!!"
+			},
+			"desc" : {
+				"pt" : "Trabalhei no projecto FenixEdu, um sistema de Gestão Académica desenvolvido no Técnico.",
+				"en" : "Joined the FenixEdu project, an Academic Management System developed in-house.",
+				"gr" : "!!Missing!!"
+			}
+		},
+		"card004" : {
+			"flag" : {
+				"pt" : "Quorum Born IT",
+				"en" : "Quorum Born IT",
+				"gr" : "!!Missing!!"
+			},
+			"time" :{
+				"pt" : "2013 - present",
+				"en" : "2013 - present",
+				"gr" : "!!Missing!!"
+			},
+			"desc" : {
+				"pt" : "Reforcei a equipa da qubIT para colaborar no desenvolvimento da sua solução baseada em FenixEdu.",
+				"en" : "Reinforced qubIT's team to work on their own flavour of FenixEdu.",
+				"gr" : "!!Missing!!"
+			}
+		}
 	},
-	"lab": {
-		"pt": "Lab",
-		"en": "Lab",
-		"gr": "Λαβ"
-	},
-	"welcome-message": {
-		"pt": "A raça dos Visigodos conquistadora das Espanhas subjugara toda a Península havia mais de um século. Nenhuma das tribos germânicas que, dividindo entre si as províncias do império dos césares, tinham tentado vestir sua bárbara nudez com os trajos despedaçados, mas esplêndidos, da civilização romana soubera como os Godos ajuntar esses fragmentos de púrpura e ouro para se compor a exemplo de povo civilizado.",
-		"en": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way.",
-		"gr": "ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον, ὃς μάλα πολλὰ πλάγχθη, ἐπεὶ Τροίης ἱερὸν πτολίεθρον ἔπερσεν: πολλῶν δ᾽ ἀνθρώπων ἴδεν ἄστεα καὶ νόον ἔγνω, πολλὰ δ᾽ ὅ γ᾽ ἐν πόντῳ πάθεν ἄλγεα ὃν κατὰ θυμόν, ἀρνύμενος ἥν τε ψυχὴν καὶ νόστον ἑταίρων. ἀλλ᾽ οὐδ᾽ ὣς ἑτάρους ἐρρύσατο, ἱέμενός περ: αὐτῶν γὰρ σφετέρῃσιν ἀτασθαλίῃσιν ὄλοντο, νήπιοι, οἳ κατὰ βοῦς Ὑπερίονος Ἠελίοιο ἤσθιον: αὐτὰρ ὁ τοῖσιν ἀφείλετο νόστιμον ἦμαρ. τῶν ἁμόθεν γε, θεά, θύγατερ Διός, εἰπὲ καὶ ἡμῖν."
+	"contacts" : {
+		"emailform" : {
+			"intro" : {
+				"pt" : "Deixe a sua mensagem.",
+				"en" : "Feel free to say hi.",
+				"gr" : "!!Missing!!"
+			},
+			"name" : {
+				"pt" : "O seu nome",
+				"en" : "Your name",
+				"gr" : "!!Missing!!"
+			},
+			"email" : {
+				"pt" : "O seu email",
+				"en" : "Your email",
+				"gr" : "!!Missing!!"
+			},
+			"subject" : {
+				"pt" : "Assunto",
+				"en" : "Subject",
+				"gr" : "!!Missing!!"
+			},
+			"body" : {
+				"pt" : "A sua mensagem...",
+				"en" : "Your message...",
+				"gr" : "!!Missing!!"
+			},
+			"sendbutton" : {
+				"pt" : "Enviar mensagem",
+				"en" : "Send message",
+				"gr" : "!!Missing!!"
+			}
+		}
 	}
 }

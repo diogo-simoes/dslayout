@@ -78,6 +78,15 @@ window.I18n = function (defaultLang) {
 	(function (i18n) {
 		$.getJSON('localized-content.json', function (json) {
 			i18n.contents = json;
+			i18n.contents.prop = function (key) {
+				var result = this;
+				var keyArr = key.split('.');
+				for (var index = 0; index < keyArr.length; index++) {
+					var prop = keyArr[index];
+					result = result[prop];
+				}
+				return result;
+			};
 			i18n.localize();
 		});
 	})(this);
@@ -100,13 +109,40 @@ window.I18n.prototype.localize = function () {
 	if (!this.hasCachedContents()) {
 		return;
 	}
-	for (var contentKey in contents) {
-		if (contents.hasOwnProperty(contentKey)) {
-			if (contents[contentKey].hasOwnProperty(this.language)) {
-				$('[data-i18n="'+contentKey+'"]').text(contents[contentKey][this.language]);
-			} else {
-				$('[data-i18n="'+contentKey+'"]').text(contents[contentKey]['en']);
+	var dfs = function (node, keys, results) {
+		var isLeaf = function (node) {
+			for (var prop in node) {
+				if (node.hasOwnProperty(prop)) {
+					if (typeof node[prop] === 'string') {
+						return true;
+					}
+				}
 			}
+		}
+		for (var prop in node) {
+			if (node.hasOwnProperty(prop) && typeof node[prop] === 'object') {
+				var myKey = keys.slice();
+				myKey.push(prop);
+				if (isLeaf(node[prop])) {
+					results.push(myKey.reduce((prev, current) => prev + '.' + current));
+				} else {
+					dfs(node[prop], myKey, results);
+				}
+			}
+		}
+		return results;
+	};
+	var keys = dfs(contents, [], []);
+	for (var index = 0; index < keys.length; index++) {
+		var key = keys[index];
+		if (contents.prop(key).hasOwnProperty(this.language)) {
+			$('[data-i18n="'+key+'"]').text(contents.prop(key)[this.language]);
+			$('[data-i18n-placeholder="'+key+'"]').attr('placeholder', contents.prop(key)[this.language]);
+			$('[data-i18n-value="'+key+'"]').attr('value', contents.prop(key)[this.language]);
+		} else {
+			$('[data-i18n="'+key+'"]').text(contents.prop(key)['en']);
+			$('[data-i18n-placeholder="'+key+'"]').attr('placeholder', contents.prop(key)['en']);
+			$('[data-i18n-value="'+key+'"]').attr('value', contents.prop(key)['en']);
 		}
 	}
 };
