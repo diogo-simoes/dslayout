@@ -3,74 +3,74 @@
 		"home" : {
 			"pt" : "Início",
 			"en" : "Home",
-			"gr" : "!!Missing!!"
+			"gr" : "Αρχική"
 		},
 		"contacts" : {
 			"pt" : "Contactos",
 			"en" : "Contacts",
-			"gr" : "!!Missing!!"
+			"gr" : "Επικοινωνία"
 		},
 		"blog" : {
 			"pt" : "Blog",
 			"en" : "Blog",
-			"gr" : "!!Missing!!"
+			"gr" : "Blog"
 		},
 		"lab" : {
 			"pt" : "Lab",
 			"en" : "Lab",
-			"gr" : "!!Missing!!"
+			"gr" : "Lab"
 		}
 	},
 	"welcome-message" : {
 		"pt" : "Olá e seja bem-vindo. Eu chamo-me Diogo e sou um engenheiro de front-end web a viver em Lisboa, Portugal. Há mais de 6 anos que trabalho em web e por sentir que me faltava um meio para documentar alguns aspectos do meu trabalho, resolvi criar este site. Espero conseguir mantê-lo autêntico e fiel aos dois princípios a que nunca abnego: mestria técnica e engenho criativo.",
 		"en" : "Hello and welcome. My name is Diogo and I am a web front-end engineer from Lisbon, Portugal. Web has been my life for over 6 years now and lacking a medium to document the most interesting aspects of my daily professional life, I have decided to come forward with this site. I hope to keep it authentic and running along the two principles I cherish the most in this line of work: technical prowess and creative ingenuity.",
-		"gr" : "!!Missing!!"
+		"gr" : "Καλωσήρθατε στη σελίδα μου. Ονομάζομαι Diogo, είμαι web front-end δημιουργός λογισμικού και ζω στη Λισαβόνα της Πορτογαλίας. Ζώντας το διαδίκτυο για πάνω από 6 χρόνια, και νιώθωντας την ανάγκη να καταγράψω κάποια ενδιαφέροντα κομμάτια της δουλειάς μου, αποφάσισα να ξεκινήσω αυτό το site. Σκοπός μου είναι να το κρατήσω αυθεντικό και πιστό στις δύο βασικές αξίες που διέπουν τη δουλειά μου: τεχνική υπεροχή και δημιουργικότητα."
 	},
 	"timeline" : {
 		"card001" : {
 			"flag" : {
 				"pt" : "Técnico Lisboa",
 				"en" : "Técnico Lisboa",
-				"gr" : "!!Missing!!"
+				"gr" : "Técnico Lisboa"
 			},
 			"time" :{
 				"pt" : "2004 - 2007",
 				"en" : "2004 - 2007",
-				"gr" : "!!Missing!!"
+				"gr" : "2004 - 2007"
 			},
 			"desc" : {
 				"pt" : "Obtive a minha Licenciatura em Engenharia Informática e de Computadores, no Instituto Superior Técnico.",
 				"en" : "Graduated from Instituto Superior Técnico. Earned my BSc. in Computer Science.",
-				"gr" : "!!Missing!!"
+				"gr" : "Πτυχίο Πληροφορικής (BSc. in Computer Science) από το Πανεπιστημίο Instituto Superior Técnico της Λισαβόνας."
 			}
 		},
 		"card002" : {
 			"flag" : {
 				"pt" : "Técnico Lisboa",
 				"en" : "Técnico Lisboa",
-				"gr" : "!!Missing!!"
+				"gr" : "Técnico Lisboa"
 			},
 			"time" :{
 				"pt" : "2007 - 2009",
 				"en" : "2007 - 2009",
-				"gr" : "!!Missing!!"
+				"gr" : "2007 - 2009"
 			},
 			"desc" : {
 				"pt" : "Obtive o meu Mestrado em Engenharia Informática e de Computadores, no Instituto Superior Técnico.",
 				"en" : "Graduated from Instituto Superior Técnico. Earned my Master's Degree in Software Engineering.",
-				"gr" : "!!Missing!!"
+				"gr" : "Μεταπτυχιακό στη Μηχανική Λογισμικού (MSc. in Software Engineering) από το Πανεπιστήμιο Instituto Superior Técnico της Λισαβόνας."
 			}
 		},
 		"card003" : {
 			"flag" : {
 				"pt" : "Técnico Lisboa",
 				"en" : "Técnico Lisboa",
-				"gr" : "!!Missing!!"
+				"gr" : "Técnico Lisboa"
 			},
 			"time" : {
 				"pt" : "2009 - 2013",
 				"en" : "2009 - 2013",
-				"gr" : "!!Missing!!"
+				"gr" : "2009 - 2013"
 			},
 			"desc" : {
 				"pt" : "Trabalhei no projecto FenixEdu, um sistema de Gestão Académica desenvolvido no Técnico.",
@@ -82,12 +82,12 @@
 			"flag" : {
 				"pt" : "Quorum Born IT",
 				"en" : "Quorum Born IT",
-				"gr" : "!!Missing!!"
+				"gr" : "Quorum Born IT"
 			},
 			"time" :{
 				"pt" : "2013 - present",
 				"en" : "2013 - present",
-				"gr" : "!!Missing!!"
+				"gr" : "2013 - σήμερα"
 			},
 			"desc" : {
 				"pt" : "Reforcei a equipa da qubIT para colaborar no desenvolvimento da sua solução baseada em FenixEdu.",
@@ -101,32 +101,32 @@
 			"intro" : {
 				"pt" : "Deixe a sua mensagem.",
 				"en" : "Feel free to say hi.",
-				"gr" : "!!Missing!!"
+				"gr" : "Αφήστε το μήνυμά σας"
 			},
 			"name" : {
 				"pt" : "O seu nome",
 				"en" : "Your name",
-				"gr" : "!!Missing!!"
+				"gr" : "Το όνομά σας"
 			},
 			"email" : {
 				"pt" : "O seu email",
 				"en" : "Your email",
-				"gr" : "!!Missing!!"
+				"gr" : "Το email σας"
 			},
 			"subject" : {
 				"pt" : "Assunto",
 				"en" : "Subject",
-				"gr" : "!!Missing!!"
+				"gr" : "Θέμα"
 			},
 			"body" : {
 				"pt" : "A sua mensagem...",
 				"en" : "Your message...",
-				"gr" : "!!Missing!!"
+				"gr" : "Μύνημα"
 			},
 			"sendbutton" : {
 				"pt" : "Enviar mensagem",
 				"en" : "Send message",
-				"gr" : "!!Missing!!"
+				"gr" : "Αποστολή"
 			}
 		}
 	}
