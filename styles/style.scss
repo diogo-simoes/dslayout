@@ -74,8 +74,17 @@ html,body {
 		width: 40%;
 		text-align: right;
 		vertical-align: middle;
+		@media screen and (max-width: 690px) {
+			width: 30%;
+		}
 		.brand-logo {
-			height: inherit;
+			@media screen and (min-width: 691px) {
+				height: inherit;
+			}
+			@media screen and (max-width: 690px) {
+				width: 120px;
+				padding: 5px 0;
+			}
 		}
 	}
 
@@ -83,16 +92,25 @@ html,body {
 		display: inline-block;
 		margin-left: 50px;
 		height: 100%;
+		@media screen and (max-width: 690px) {
+			margin-left: 1em;
+		}
 		.menu-item {
 			height: 100%;
 			padding: 0 8px;
 			display: inline-block;
 			vertical-align: middle;
 			text-decoration: inherit;
+			@media screen and (max-width: 690px) {
+				padding: 0 4px;
+			}
 			.menu-label {
 				font: 200 18px/40px $font_family;
 				color: #ffffff;
 				vertical-align: middle;
+				@media screen and (max-width: 690px) {
+					font: 200 15px/40px $font_family;
+				}
 			}
 			&:hover {
 				background-color: #4479ac;
@@ -101,6 +119,9 @@ html,body {
 		.menu-item-lang {
 			@include clickable;
 			margin-left: 30px;
+			@media screen and (max-width: 690px) {
+				margin-left: 10px;
+			}
 			.i18n-menu {
 				display: none;
 				position: absolute;
@@ -109,6 +130,20 @@ html,body {
 				background-color: rgba(#0f1a24, 0.80);
 				border-radius: 20px;
 				padding: 12px 24px;
+				@media screen and (max-width: 900px) {
+					width: 84px;
+					margin-left: -54px;
+				}
+				@media screen and (max-width: 690px) {
+					margin-left: 0px;
+					width: 100%;
+					left: 0;
+					top: 40px;
+					border-radius: 0;
+					border-top: 1px solid rgba(#0f1a24, 0.20);
+					text-align: center;
+					padding: 12px 0;
+				}
 				.language-picker {
 					padding: 0;
 					margin: 0;
@@ -119,6 +154,9 @@ html,body {
 						font: 100 12px/20px 'Comfortaa', sans-serif;
 						color: #ffffff;
 						@include clickable;
+						@media screen and (max-width: 900px) and (min-width: 691px){
+							margin-left: 0;
+						}
 						&:first-child {
 							margin-left: 0;
 						}
@@ -142,7 +180,13 @@ html,body {
 					height: 0; 
 					border-left: 16px solid transparent;
 					border-right: 16px solid transparent;
-					border-bottom: 16px solid rgba(#0f1a24, 0.80);;
+					border-bottom: 16px solid rgba(#0f1a24, 0.80);
+					@media screen and (max-width: 900px) {
+						margin-left: -15px;
+					}
+					@media screen and (max-width: 690px) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -150,21 +194,28 @@ html,body {
 }
 
 .intro-section {
-	height: 1200px;
-	background-image: url('../images/lisbon_sunset_01.jpg');
+	height: 100vh;
 	background-position: center top;
 	background-repeat: no-repeat;
-	//background-size: 100%; //to apply to larger displays with media queries
+	@media screen and (max-width: 1920px) {
+		background-image: url('../images/lisbon_sunset_01.jpg');
+	}
+	@media screen and (min-width: 1921px) {
+		background-image: url('../images/lisbon_sunset_02.jpg');
+	}
 
 	.i18n-bar {
 		height: 20px;
-		width: 1440px;
+		max-width: 1440px;
 		margin: 0 auto;
 		position: relative;
 		top: 20px;
 		.language-picker {
 			padding: 0;
 			margin: 0 0 0 50%;
+			@media screen and (max-width: 690px) {
+				margin: 0 0 0 40%;
+			}
 			.language-item {
 				margin-left: 20px;
 				list-style: none;
@@ -188,33 +239,61 @@ html,body {
 
 	.title-bar {
 		height: 100px;
-		width: 1440px;
+		max-width: 1440px;
 		margin: 0 auto;
 		position: relative;
 		top: 20px;
 		.brand {
-			display: inline-block;
+			@media screen and (min-width: 1367px) {
+				display: inline-block;
+			}
+			@media screen and (max-width: 1366px) {
+				display: block;
+			}
 			margin: 0 50px;
+			@media screen and (max-width: 690px) {
+				margin: 0;
+			}
 			height: 100px;
 			text-align: center;
 			vertical-align: middle;
 			.brand-logo {
-				height: inherit;
+				@media screen and (min-width: 691px) {
+					height: inherit;
+				}
+				@media screen and (max-width: 690px) {
+					padding-top: 13px;
+					width: 380px;
+				}
 			}
 		}
 
 		.menu {
-			display: inline-block;
+			@media screen and (min-width: 1367px) {
+				display: inline-block;
+			}
+			@media screen and (max-width: 1366px) {
+				display: block;
+				text-align: center;
+			}
 			.menu-item {
+				display: inline-block;
 				border: 1px solid #ffffff;
 				margin: 16px;
 				padding: 12px 24px;
+				@media screen and (max-width: 690px) {
+					padding: 9px 18px;
+					margin: 6px;
+				}
 				vertical-align: middle;
 				text-decoration: inherit;
 				.menu-label {
 					font: 100 24px/24px $font_family;
 					color: #ffffff;
 					vertical-align: middle;
+					@media screen and (max-width: 690px) {
+						font: 100 18px/18px $font_family;
+					}
 				}
 				&:hover {
 					background-color: #fafafa;
@@ -227,15 +306,30 @@ html,body {
 	}
 
 	.welcome-section {
-		margin-top: 650px;
+		max-width: 1000px;
+		position: absolute;
+		bottom: 20%;
+		left: 50%;
+		margin-left: -500px;
+		@media screen and (max-width: 900px) {
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			margin: 0;
+		}
 		.welcome-area {
-			width: 1000px;
+			width: 100%;
 			min-height: 200px;
 			margin: 0 auto;
 			background-color: rgba(0,0,0,0.6);
 		}
 		.photo-area {
 			display: inline-block;
+			@media screen and (max-width: 900px) {
+				display: block;
+				margin: 0 auto;
+				padding-top: 1em;
+			}
 			width: 25%;
 			vertical-align: middle;
 			.photo {
@@ -260,6 +354,13 @@ html,body {
 			width: 70%;
 			vertical-align: middle;
 			margin: 25px 0;
+			@media screen and (max-width: 900px) {
+				display: block;
+				width: 90%;
+				text-align: left;
+				margin: 0 auto;
+				padding: 25px 0;
+			}
 			.quotes{
 				display: inline-block;
 				font-style: italic;
@@ -267,12 +368,18 @@ html,body {
 				color: #ffffff;
 				vertical-align: middle;
 				margin-right: 10px;
+				@media screen and (max-width: 690px) {
+					font-size: 24px;
+				}
 			}
 			.welcome-message {
 				display: inline;
 				font: italic 300 18px/28px $font_family;
 				color: #ffffff;
 				vertical-align: bottom;
+				@media screen and (max-width: 690px) {
+					font: italic 300 16px/22px $font_family;
+				}
 			}
 		}
 	}
