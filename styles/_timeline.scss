@@ -38,6 +38,9 @@ $font_family: 'Arial', sans-serif !default;
 		font-family: $font_family;
 		font-size: 112.5%;
 		line-height: 1.6em;
+		@media screen and (max-width: 660px) {
+			overflow-x: hidden;
+		}
 
 		.time-lapse {
 			margin: 40px auto;
@@ -54,6 +57,9 @@ $font_family: 'Arial', sans-serif !default;
 			margin-top: 20px;
 			padding: 1em 0;
 			list-style-type: none;
+			@media screen and (max-width: 660px) {
+				width: 100%;
+			}
 		}
 
 		.timeline:before {
@@ -86,12 +92,20 @@ $font_family: 'Arial', sans-serif !default;
 			width: 300px;
 			float: left;
 			text-align: right;
+			@media screen and (max-width: 660px) {
+				width: 50%;
+				right: 30px;
+			}
 		}
 
 		.direction-r {
 			position: relative;
 			width: 300px;
 			float: right;
+			@media screen and (max-width: 660px) {
+				width: 50%;
+				left: 30px;
+			}
 		}
 
 		.flag-wrapper {
@@ -179,10 +193,18 @@ $font_family: 'Arial', sans-serif !default;
 
 		.direction-l .time-wrapper {
 			float: left;
+			@media screen and (max-width: 660px) {
+				float: none;
+				display: block;
+			}
 		}
 
 		.direction-r .time-wrapper {
 			float: right;
+			@media screen and (max-width: 660px) {
+				float: none;
+				display: block;
+			}
 		}
 
 		.time {
@@ -196,10 +218,18 @@ $font_family: 'Arial', sans-serif !default;
 			font-size: 0.77777em;
 			font-style: italic;
 			line-height: 1.5em;
+			@media screen and (max-width: 660px) {
+				position: relative;
+				left: 30px;
+			}
 		}
 
 		.direction-r .desc {
 			margin: 1em 0 0 0.75em;
+			@media screen and (max-width: 660px) {
+				position: relative;
+				left: -30px;
+			}
 		}
 	}
 }
