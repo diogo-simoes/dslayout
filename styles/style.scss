@@ -416,6 +416,9 @@ html,body {
 		border-radius: 2px;
 		background-color: rgba(250,250,250,0.9);
 		overflow: hidden;
+		@media screen and (max-width: 800px) {
+			margin-left: -200px;
+		}
 
 		.contacts-menu {
 			ul {
