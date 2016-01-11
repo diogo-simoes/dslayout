@@ -2,4 +2,5 @@ images/*
 styles/*.sass-cache*
 styles/*.sassbuilder*
 styles/*.css*
+services/*.pyc
 .DS_Store
