@@ -108,10 +108,20 @@
 				"en" : "Your name",
 				"gr" : "Το όνομά σας"
 			},
+			"name-validator" : {
+				"pt" : "O seu nome - campo obrigatório",
+				"en" : "Your name - required field",
+				"gr" : "!!Missing!!"
+			},
 			"email" : {
 				"pt" : "O seu email",
 				"en" : "Your email",
 				"gr" : "Το email σας"
+			},
+			"email-validator" : {
+				"pt" : "O seu email - formato: endereço@dominio.tld",
+				"en" : "Your email - required: address@domain.tld",
+				"gr" : "!!Missing!!"
 			},
 			"subject" : {
 				"pt" : "Assunto",
@@ -127,6 +137,41 @@
 				"pt" : "Enviar mensagem",
 				"en" : "Send message",
 				"gr" : "Αποστολή"
+			},
+			"sending" : {
+				"pt" : "A enviar",
+				"en" : "Sending",
+				"gr" : "!!Missing!!"
+			},
+			"success" : {
+				"pt" : "A sua mensagem foi enviada.",
+				"en" : "Your message was successfully sent.",
+				"gr" : "!!Missing!!"
+			},
+			"thanks" : {
+				"pt" : "Obrigado!",
+				"en" : "Thank you!",
+				"gr" : "!!Missing!!"
+			},
+			"writeagain" : {
+				"pt" : "Enviar nova mensagem",
+				"en" : "Send another message",
+				"gr" : "!!Missing!!"
+			},
+			"failed" : {
+				"pt" : "A sua mensagem não pôde ser enviada.",
+				"en" : "Your message could not be sent.",
+				"gr" : "!!Missing!!"
+			},
+			"tryagain" : {
+				"pt" : "Tente de novo mais tarde ou...",
+				"en" : "Try again later or...",
+				"gr" : "!!Missing!!"
+			},
+			"manualsend" : {
+				"pt" : "envie usando o seu cliente de email habitual.",
+				"en" : "send it using your regular e-mail client.",
+				"gr" : "!!Missing!!"
 			}
 		}
 	}

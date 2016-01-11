@@ -150,12 +150,28 @@
 					--><div class="contacts-email">
 						<form id="contact-form">
 							<div class="contact-message" data-i18n="contacts.emailform.intro"></div>
-							<input type="text" class="name-textfield" data-i18n-placeholder="contacts.emailform.name">
-							<input type="text" class="email-textfield" data-i18n-placeholder="contacts.emailform.email">
-							<input type="text" class="subject-textfield" data-i18n-placeholder="contacts.emailform.subject">
-							<textarea form="contact-form" class="contact-textarea" rows="12" data-i18n-placeholder="contacts.emailform.body"></textarea>
-							<input type="submit" class="contact-submit" data-i18n-value="contacts.emailform.sendbutton">
+							<input type="text" id="name-textfield" data-i18n-placeholder="contacts.emailform.name">
+							<input type="text" id="email-textfield" data-i18n-placeholder="contacts.emailform.email">
+							<input type="text" id="subject-textfield" data-i18n-placeholder="contacts.emailform.subject">
+							<textarea form="contact-form" id="contact-textarea" rows="12" data-i18n-placeholder="contacts.emailform.body"></textarea>
+							<input type="submit" id="contact-submit" class="contact-submit" data-i18n-value="contacts.emailform.sendbutton">
 						</form>
+						<div class="email-success">
+							<div class="email-success-icon"><i class="et-check"></i></div>
+							<div class="email-success-message">
+								<p data-i18n="contacts.emailform.success"></p>
+								<p data-i18n="contacts.emailform.thanks"></p>
+							</div>
+							<button id="email-success-write-again" data-i18n="contacts.emailform.writeagain"></button>
+						</div>
+						<div class="email-error">
+							<div class="email-error-icon"><i class="et-cross"></i></div>
+							<div class="email-error-message">
+								<p data-i18n="contacts.emailform.failed"></p>
+								<p data-i18n="contacts.emailform.tryagain"></p>
+								<p><a id="send-email-manually" href="#" data-i18n="contacts.emailform.manualsend"></a></p>
+							</div>
+						</div>
 					</div><!--
 					--><div class="contacts-social-media">
 						<div class="social-media-wrapper">

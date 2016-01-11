@@ -2,7 +2,7 @@
 
 ## TODO: ##
 * Internacionalização do site (EN - PT - GR) -> Render de conteúdos json
-* Motor de envio email
+* Motor de envio email (1º implementar e testar serviço; 2º refinar API e implementar consumidor; 3º refinar UI)
 + Implementar blog no site com notificação (+sinapse) no Twitter e/ou LinkedIn.
 - Criar conta Twitter
 - Criar nova conta Skype -> migrar conta Skype

@@ -1,6 +1,8 @@
 
 $( document ).ready( function () {
 
+	var officialEmail = "diogo.fonseca.simoes@gmail.com";
+
 	var i18n = new I18n();
 
 	$( window ).on('scroll', function () {
@@ -68,6 +70,78 @@ $( document ).ready( function () {
 
 	$('#social-media-menu').click( function () {
 		changeContactsPanelContent('social-media-menu',-800);
+	});
+
+	$('#name-textfield').on('focus', function () {
+		$(this).removeClass('contact-textfield-validated');
+	});
+
+	$('#email-textfield').on('focus', function () {
+		$(this).removeClass('contact-textfield-validated');
+	});
+
+	var validateForm = function () {
+		if (!$('#name-textfield').val()) {
+			$('#name-textfield').attr('data-i18n-placeholder','contacts.emailform.name-validator');
+			i18n.localize();
+			$('#name-textfield').addClass('contact-textfield-validated');
+		}
+
+		var emailPattern = /^[^\.@]+([.][^\.@]+)*[@][^\.@]+([.][^\.@]+)+$/;
+
+		if (!$('#email-textfield').val() || !emailPattern.test($('#email-textfield').val().trim())) {
+			$('#email-textfield').val("");
+			$('#email-textfield').attr('data-i18n-placeholder','contacts.emailform.email-validator');
+			i18n.localize();
+			$('#email-textfield').addClass('contact-textfield-validated');
+		}
+		return $('#name-textfield').val() && $('#email-textfield').val() && emailPattern.test($('#email-textfield').val().trim());
+	}
+
+	$('#contact-submit').on('click', function () {
+		if (!validateForm()) {
+			return false;
+		}
+		$(this).attr('disabled', 'disabled');
+		$(this).attr('data-i18n-value','contacts.emailform.sending');
+		i18n.localize();
+		var name = $('#name-textfield').val();
+		var email = $('#email-textfield').val();
+		var timestamp = (new Date()).toUTCString();
+		var subject = $('#subject-textfield').val();
+		var message = $('#contact-textarea').val();
+		$.ajax({
+			method: 'POST',
+			url: 'http://localhost:8080/mailservice',
+			data: JSON.stringify({'name': name, 'email': email, 'timestamp': timestamp, 'subject': subject, 'message': message}),
+			dataType: 'json'
+		}).done( function (msg) {
+			$('#contact-form').slideUp();
+			$('.email-success').slideDown();
+		}).fail( function (msg) {
+			$('#send-email-manually').attr('href', "mailto:" + officialEmail + 
+				"?subject=" + subject +
+				"&body=" + message);
+			$('#contact-form').slideUp();
+			$('.email-error').slideDown();
+		}).always( function (msg) {
+			$('#contact-submit').removeAttr('disabled');
+			$('#contact-submit').attr('data-i18n-value','contacts.emailform.sendbutton');
+			i18n.localize();
+		});
+		return false;
+	});
+
+	$('#email-success-write-again').on('click', function () {
+		$('#contact-form')[0].reset();
+		$('.email-success').hide();
+		$('#contact-form').slideDown();
+	});
+
+	$('#send-email-manually').on('click', function () {
+		$('#contact-form')[0].reset();
+		$('.email-error').hide();
+		$('#contact-form').slideDown();
 	});
 });
 
