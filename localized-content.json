@@ -22,8 +22,8 @@
 		}
 	},
 	"welcome-message" : {
-		"pt" : "Olá e seja bem-vindo. Eu chamo-me Diogo e sou um engenheiro de front-end web a viver em Lisboa, Portugal. Há mais de 6 anos que trabalho em web e por sentir que me faltava um meio para documentar alguns aspectos do meu trabalho, resolvi criar este site. Espero conseguir mantê-lo autêntico e fiel aos dois princípios a que nunca abnego: mestria técnica e engenho criativo.",
-		"en" : "Hello and welcome. My name is Diogo and I am a web front-end engineer from Lisbon, Portugal. Web has been my life for over 6 years now and lacking a medium to document the most interesting aspects of my daily professional life, I have decided to come forward with this site. I hope to keep it authentic and running along the two principles I cherish the most in this line of work: technical prowess and creative ingenuity.",
+		"pt" : "Olá e bem-vindo ao meu cantinho na web. Eu chamo-me Diogo e sou um engenheiro de front-end web a viver em Lisboa, Portugal. Se já gostas de Sass e JS, excelente. Se ainda não, então algo me diz que te vais render em pouco tempo. Estejas à procura apenas de alguns componentes web, de algumas dicas ou de um pouco de inspiração, espero sinceramente que o consigas encontrar aqui.",
+		"en" : "Hello and welcome to my little corner on the web. My name is Diogo and I am a web front-end engineer from Lisbon, Portugal. If you already like Sass and JS, excellent. If not, something tells me you will soon. Be that you are looking for some web components, a handful of useful hints or just a bit of inspiration I hope you can find it here.",
 		"gr" : "Καλωσήρθατε στη σελίδα μου. Ονομάζομαι Diogo, είμαι web front-end δημιουργός λογισμικού και ζω στη Λισαβόνα της Πορτογαλίας. Ζώντας το διαδίκτυο για πάνω από 6 χρόνια, και νιώθωντας την ανάγκη να καταγράψω κάποια ενδιαφέροντα κομμάτια της δουλειάς μου, αποφάσισα να ξεκινήσω αυτό το site. Σκοπός μου είναι να το κρατήσω αυθεντικό και πιστό στις δύο βασικές αξίες που διέπουν τη δουλειά μου: τεχνική υπεροχή και δημιουργικότητα."
 	},
 	"timeline" : {
@@ -92,7 +92,7 @@
 			"desc" : {
 				"pt" : "Reforcei a equipa da qubIT para colaborar no desenvolvimento da sua solução baseada em FenixEdu.",
 				"en" : "Reinforced qubIT's team to work on their own flavour of FenixEdu.",
-				"gr" : "!!Missing!!"
+				"gr" : "Ως μέλος της ομάδας της qubIT, συνέβαλα στην δημιουργία της "
 			}
 		}
 	},
@@ -111,7 +111,7 @@
 			"name-validator" : {
 				"pt" : "O seu nome - campo obrigatório",
 				"en" : "Your name - required field",
-				"gr" : "!!Missing!!"
+				"gr" : "Το όνομά σας / υποχρεωτικό πεδίο"
 			},
 			"email" : {
 				"pt" : "O seu email",
@@ -121,7 +121,7 @@
 			"email-validator" : {
 				"pt" : "O seu email - formato: endereço@dominio.tld",
 				"en" : "Your email - required: address@domain.tld",
-				"gr" : "!!Missing!!"
+				"gr" : "Το email σας / υποχρεωτικό πεδίο"
 			},
 			"subject" : {
 				"pt" : "Assunto",
@@ -141,36 +141,41 @@
 			"sending" : {
 				"pt" : "A enviar",
 				"en" : "Sending",
-				"gr" : "!!Missing!!"
+				"gr" : "Αποστέλλεται"
 			},
 			"success" : {
 				"pt" : "A sua mensagem foi enviada.",
 				"en" : "Your message was successfully sent.",
-				"gr" : "!!Missing!!"
+				"gr" : "Το μήνυμα εστάλη"
 			},
 			"thanks" : {
 				"pt" : "Obrigado!",
 				"en" : "Thank you!",
-				"gr" : "!!Missing!!"
+				"gr" : "Ευχαριστώ!"
 			},
 			"writeagain" : {
 				"pt" : "Enviar nova mensagem",
 				"en" : "Send another message",
-				"gr" : "!!Missing!!"
+				"gr" : "Αποστολή νέου μηνύματος"
 			},
 			"failed" : {
 				"pt" : "A sua mensagem não pôde ser enviada.",
 				"en" : "Your message could not be sent.",
-				"gr" : "!!Missing!!"
+				"gr" : "Το μήνυμα δεν εστάλη."
 			},
-			"tryagain" : {
+			"tryagainmsg" : {
 				"pt" : "Tente de novo mais tarde ou...",
 				"en" : "Try again later or...",
-				"gr" : "!!Missing!!"
+				"gr" : "Παρακαλώ προσπαθήστε ξανά ή..."
 			},
 			"manualsend" : {
 				"pt" : "envie usando o seu cliente de email habitual.",
 				"en" : "send it using your regular e-mail client.",
+				"gr" : "στείλτε το χρησιμοποιώντας τον πελάτη ηλεκτρονικού ταχυδρομείου σας"
+			},
+			"tryagain" : {
+				"pt" : "Tentar de novo",
+				"en" : "Try again",
 				"gr" : "!!Missing!!"
 			}
 		}

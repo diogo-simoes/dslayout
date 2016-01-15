@@ -143,6 +143,10 @@ $( document ).ready( function () {
 		$('.email-error').hide();
 		$('#contact-form').slideDown();
 	});
+	$('#email-error-try-again').on('click', function () {
+		$('.email-error').hide();
+		$('#contact-form').slideDown();
+	});
 });
 
 window.I18n = function (defaultLang) {

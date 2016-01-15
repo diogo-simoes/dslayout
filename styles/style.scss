@@ -674,6 +674,20 @@ html,body {
 						p {
 							margin: 10px auto;
 						}
+						margin-bottom: 20px;
+					}
+					#email-error-try-again {
+						font: 300 14px/18px $font_family;
+						color: darken(#ffffff, 10%);
+						background-color: lighten(#4479ac, 10%);
+						border: none;
+						padding: 6px 12px;
+						float: right;
+						@include clickable;
+						&:hover {
+							background-color: #4479ac;
+							color: #ffffff;
+						}
 					}
 				}
 			}
@@ -707,11 +721,11 @@ html,body {
 								to {border-radius: 40px;}
 							}
 							@include keyframes('pulse') {
-								0% {width:80px;height:80px;margin:10px;line-height: 80px;background-color: darken(#4479ac, 10%)}
-								60% {width:70px;height:70px;margin:15px;line-height: 70px;background-color: lighten(#4479ac, 10%)}
-								100% {width:80px;height:80px;margin:10px;line-height: 80px;background-color: darken(#4479ac, 10%)}
+								0% {background-color: darken(#4479ac, 10%)}
+								60% {background-color: lighten(#4479ac, 10%)}
+								100% {background-color: darken(#4479ac, 10%)}
 							}
-							@include animation(roundify ease-out 300ms, pulse ease-in 500ms);
+							@include animation(roundify ease-out 200ms, pulse ease-in 800ms);
 						}
 					}
 				}
