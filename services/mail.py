@@ -2,16 +2,40 @@ import web
 import json
 import textwrap
 
-web.config.smtp_server = 'smtp.gmail.com'
-web.config.smtp_port = 587
-web.config.smtp_username = 'diogo.fonseca.simoes@gmail.com'
-web.config.smtp_password = '*****'
-web.config.smtp_starttls = True
+confs = {
+	'mail_recipient': '',
+	'allowed_origins': []
+}
+
+def init():
+	f = open('mail.config', 'r')
+	for line in f:
+		prop = line.replace(' ','').rstrip().split('=')
+		if (prop[0] == 'smtp_server'):
+			web.config.smtp_server = prop[1]
+		elif (prop[0] == 'smtp_port'):
+			web.config.smtp_port = prop[1]
+		elif (prop[0] == 'smtp_username'):
+			web.config.smtp_username = prop[1]
+		elif (prop[0] == 'smtp_password'):
+			web.config.smtp_password = prop[1]
+		elif (prop[0] == 'smtp_starttls'):
+			web.config.smtp_starttls = True if prop[1].upper() == 'TRUE' else False
+		elif (prop[0] == 'mail_recipient'):
+			confs['mail_recipient'] = prop[1]
+		elif (prop[0] == 'allowed_origins'):
+			for url in prop[1].split(","):
+				confs['allowed_origins'].append(url.strip())
+		else:
+			print'Unknown prop: ' + prop[0] + ' --> ' + prop[1]
+	f.close()
+
+init()
 
 urls = (
 	'/mailservice', 'Mail'
 )
-auth_origins = ['http://localhost:8190']
+
 app = web.application(urls, globals())
 
 class Mail:
@@ -28,16 +52,16 @@ class Mail:
 		web.header('Cache-control', 'no-cache')
 		web.header('Access-Control-Allow-Origin', client_origin)
 
-		if not(client_origin in auth_origins):
+		if not(client_origin in confs['allowed_origins']):
 			web.ctx.status = '401 Unauthorized'
 			return
 
 		mail_data = json.loads(web.data())
-		_to = 'diogo.fonseca.simoes@gmail.com'
-		_from = mail_data["email"]
-		_sender = mail_data["name"]
-		_timestamp = mail_data["timestamp"]
-		_subject = mail_data["subject"]
+		_to = confs['mail_recipient']
+		_from = mail_data['email']
+		_sender = mail_data['name']
+		_timestamp = mail_data['timestamp']
+		_subject = mail_data['subject']
 		_body = textwrap.dedent(
 			"""
 			=======================================================
