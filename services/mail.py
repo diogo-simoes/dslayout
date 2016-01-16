@@ -1,6 +1,10 @@
+#!/usr/bin/env python
+
 import web
 import json
 import textwrap
+import sys
+import os
 
 confs = {
 	'mail_recipient': '',
@@ -8,7 +12,7 @@ confs = {
 }
 
 def init():
-	f = open('mail.config', 'r')
+	f = open(os.path.join(os.path.dirname(__file__), 'mail.config'), 'r')
 	for line in f:
 		prop = line.replace(' ','').rstrip().split('=')
 		if (prop[0] == 'smtp_server'):
@@ -31,12 +35,14 @@ def init():
 	f.close()
 
 init()
+print 'Restarting...'
 
 urls = (
 	'/mailservice', 'Mail'
 )
-
-app = web.application(urls, globals())
+#app = web.application(urls, globals())
+app = web.application(urls, globals(), autoreload=False)
+application = app.wsgifunc()
 
 class Mail:
 	def GET(self):
