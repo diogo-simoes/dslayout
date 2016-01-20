@@ -1,7 +1,6 @@
 # == Projecto Site diogo-simoes.com == #
 
 ## TODO: ##
-* Internacionalização do site (EN - PT - GR) -> Render de conteúdos json
 + Implementar blog no site com notificação (+sinapse) no Twitter e/ou LinkedIn.
 
 ## DONE: ##
@@ -16,6 +15,7 @@
 - Criar conta Twitter
 - Criar nova conta Skype -> migrar conta Skype
 - Arranjar alojamento e domínio (site & email).
+* Internacionalização do site (EN - PT - GR) -> Render de conteúdos json
 
 # == Projectos Futuros == #
 

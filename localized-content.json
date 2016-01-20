@@ -22,9 +22,9 @@
 		}
 	},
 	"welcome-message" : {
-		"pt" : "Olá e bem-vindo ao meu cantinho na web. Eu chamo-me Diogo e sou um engenheiro de front-end web a viver em Lisboa, Portugal. Se já gostas de Sass e JS, excelente. Se ainda não, então algo me diz que te vais render em pouco tempo. Estejas à procura apenas de alguns componentes web, de algumas dicas ou de um pouco de inspiração, espero sinceramente que o consigas encontrar aqui.",
+		"pt" : "Olá e sê bem-vindo ao meu retiro na web. Eu chamo-me Diogo e sou um engenheiro de front-end web a viver em Lisboa, Portugal. Se Sass e JS são a tua praia, óptimo. Se não, já estás mais perto desse areal. Estejas apenas à procura de alguns componentes web, de algumas dicas ou de um pouco de inspiração, espero sinceramente que o consigas encontrar aqui.",
 		"en" : "Hello and welcome to my little corner on the web. My name is Diogo and I am a web front-end engineer from Lisbon, Portugal. If you already like Sass and JS, excellent. If not, something tells me you will soon. Be that you are looking for some web components, a handful of useful hints or just a bit of inspiration I hope you can find it here.",
-		"gr" : "Καλωσήρθατε στη σελίδα μου. Ονομάζομαι Diogo, είμαι web front-end δημιουργός λογισμικού και ζω στη Λισαβόνα της Πορτογαλίας. Ζώντας το διαδίκτυο για πάνω από 6 χρόνια, και νιώθωντας την ανάγκη να καταγράψω κάποια ενδιαφέροντα κομμάτια της δουλειάς μου, αποφάσισα να ξεκινήσω αυτό το site. Σκοπός μου είναι να το κρατήσω αυθεντικό και πιστό στις δύο βασικές αξίες που διέπουν τη δουλειά μου: τεχνική υπεροχή και δημιουργικότητα."
+		"gr" : "Καλωσήρθατε στη σελίδα μου. Ονομάζομαι Diogo, είμαι web front-end δημιουργός λογισμικού και ζω στη Λισαβόνα της Πορτογαλίας. Αν σας αρέσει ήδη η Sass και η JS, είστε στο σωστό μερος. Αν ψάχνετε για κάποιο στοιχείο web, για μερικές χρήσιμες συμβουλές ή απλά για λίγη έμπνευση, ελπίζω να το βρείτε εδώ. "
 	},
 	"timeline" : {
 		"card001" : {
@@ -75,7 +75,7 @@
 			"desc" : {
 				"pt" : "Trabalhei no projecto FenixEdu, um sistema de Gestão Académica desenvolvido no Técnico.",
 				"en" : "Joined the FenixEdu project, an Academic Management System developed in-house.",
-				"gr" : "!!Missing!!"
+				"gr" : "Εργάστηκα πάνω στο FenixEdu, το ηλεκτρονικό σύστημα εκπαιδευτικής διαχείρησης του Πανεπιστημίου Insituto Superior Técnico."
 			}
 		},
 		"card004" : {
@@ -92,7 +92,7 @@
 			"desc" : {
 				"pt" : "Reforcei a equipa da qubIT para colaborar no desenvolvimento da sua solução baseada em FenixEdu.",
 				"en" : "Reinforced qubIT's team to work on their own flavour of FenixEdu.",
-				"gr" : "Ως μέλος της ομάδας της qubIT, συνέβαλα στην δημιουργία της "
+				"gr" : "Ως μέλος της ομάδας της qubIT, συνέβαλα στην δημιουργία της δικής τους εκδοχής του FenixEdu."
 			}
 		}
 	},
@@ -111,7 +111,7 @@
 			"name-validator" : {
 				"pt" : "O seu nome - campo obrigatório",
 				"en" : "Your name - required field",
-				"gr" : "Το όνομά σας / υποχρεωτικό πεδίο"
+				"gr" : "Το όνομά σας - υποχρεωτικό πεδίο"
 			},
 			"email" : {
 				"pt" : "O seu email",
@@ -121,7 +121,7 @@
 			"email-validator" : {
 				"pt" : "O seu email - formato: endereço@dominio.tld",
 				"en" : "Your email - required: address@domain.tld",
-				"gr" : "Το email σας / υποχρεωτικό πεδίο"
+				"gr" : "Το email σας - υποχρεωτικό: address@domain.tld"
 			},
 			"subject" : {
 				"pt" : "Assunto",
@@ -176,7 +176,7 @@
 			"tryagain" : {
 				"pt" : "Tentar de novo",
 				"en" : "Try again",
-				"gr" : "!!Missing!!"
+				"gr" : "Προσπαθήστε ξανά"
 			}
 		}
 	}
