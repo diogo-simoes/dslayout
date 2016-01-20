@@ -1,7 +1,7 @@
 
 $( document ).ready( function () {
 
-	var officialEmail = "diogo.fonseca.simoes@gmail.com";
+	var officialEmail = "hello@diogosimoes.com";
 
 	var i18n = new I18n();
 
