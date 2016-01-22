@@ -5,3 +5,4 @@ styles/*.css*
 services/*.pyc
 services/mail.config
 .DS_Store
+services/blacklist.log

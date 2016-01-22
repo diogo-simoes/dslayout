@@ -3,13 +3,58 @@
 import web
 import json
 import textwrap
-import sys
 import os
+import datetime
 
-confs = {
-	'mail_recipient': '',
-	'allowed_origins': []
-}
+class Watchdog:
+	def __init__(self, interval=15, max_requests=30):
+		self.interval = interval
+		self.max_requests = max_requests
+		self.mru = {}
+		self.blacklist = []
+		if os.path.exists('blacklist.log'):
+			with open('blacklist.log', 'r') as bl:
+				for line in bl:
+					self.blacklist.append(line.rstrip())
+
+	def add_to_blacklist(self, ip):
+		self.blacklist.append(ip)
+		with open('blacklist.log', 'a+') as bl:
+			bl.write(ip + '\n')
+
+	def log_ip(self, ip):
+		#if on blacklist, then reject
+		if ip in self.blacklist:
+			return 'blocked'
+
+		#if not on mru, just log it {ip: [timestamp1,timestamp2...timestampn]}
+		if self.mru.get(ip) is None:
+			self.mru[ip] = [datetime.datetime.utcnow()]
+			return 'granted'
+
+		#if exists:
+		#	1. clean old timestamps
+		#	2. add new timestamp
+		#	3. if above reasonable limit: add to blacklist
+		history = self.mru[ip]
+		now = datetime.datetime.utcnow()
+		for stamp in history:
+			if now > stamp + datetime.timedelta(minutes=self.interval):
+				history.remove(stamp)
+			else:
+				break
+		history.append(now)
+		if len(history) > self.max_requests:
+			self.add_to_blacklist(ip)
+			return 'blocked'
+		else:
+			return 'granted'
+
+class Bag:
+	pass
+
+confs = Bag()
+confs.mail_recipient = ''
 
 def init():
 	f = open(os.path.join(os.path.dirname(__file__), 'mail.config'), 'r')
@@ -26,13 +71,11 @@ def init():
 		elif (prop[0] == 'smtp_starttls'):
 			web.config.smtp_starttls = True if prop[1].upper() == 'TRUE' else False
 		elif (prop[0] == 'mail_recipient'):
-			confs['mail_recipient'] = prop[1]
-		elif (prop[0] == 'allowed_origins'):
-			for url in prop[1].split(","):
-				confs['allowed_origins'].append(url.strip())
+			confs.mail_recipient = prop[1]
 		else:
 			print'Unknown prop: ' + prop[0] + ' --> ' + prop[1]
 	f.close()
+	confs.wd = Watchdog();
 
 init()
 print 'Restarting...'
@@ -43,6 +86,7 @@ urls = (
 #app = web.application(urls, globals())
 app = web.application(urls, globals(), autoreload=False)
 application = app.wsgifunc()
+
 
 class Mail:
 	def GET(self):
@@ -58,12 +102,12 @@ class Mail:
 		web.header('Cache-control', 'no-cache')
 		web.header('Access-Control-Allow-Origin', client_origin)
 
-		if not(client_origin in confs['allowed_origins']):
+		if (confs.wd.log_ip(client_ip) == 'blocked'):
 			web.ctx.status = '401 Unauthorized'
 			return
 
 		mail_data = json.loads(web.data())
-		_to = confs['mail_recipient']
+		_to = confs.mail_recipient
 		_from = mail_data['email']
 		_sender = mail_data['name']
 		_timestamp = mail_data['timestamp']
