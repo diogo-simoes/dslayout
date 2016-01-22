@@ -1,5 +1,4 @@
 mail_recipient = recipient@domain.tld
-allowed_origins = http://localhost:80
 smtp_server = smtp.domain.tld
 smtp_port = 587
 smtp_username = smtpaccount@domain.tld
