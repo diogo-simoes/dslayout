@@ -72,7 +72,7 @@ def init():
 		elif (prop[0] == 'mail_recipient'):
 			confs.mail_recipient = prop[1]
 		else:
-			print'Unknown prop: ' + prop[0] + ' --> ' + prop[1]
+			print 'Unknown prop: ' + prop[0] + ' --> ' + prop[1]
 	f.close()
 	confs.wd = Watchdog();
 

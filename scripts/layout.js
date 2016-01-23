@@ -202,7 +202,10 @@ window.I18n.prototype.localize = function () {
 				var myKey = keys.slice();
 				myKey.push(prop);
 				if (isLeaf(node[prop])) {
-					results.push(myKey.reduce((prev, current) => prev + '.' + current));
+					//results.push(myKey.reduce((prev, current) => prev + '.' + current));	//not supported in older mobile broweser
+					results.push(myKey.reduce( function (previousValue, currentValue, currentIndex, array) {
+						return previousValue + '.' + currentValue;
+					}));
 				} else {
 					dfs(node[prop], myKey, results);
 				}

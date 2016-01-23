@@ -1,9 +1,8 @@
 # == Projecto Site diogo-simoes.com == #
 
 ## TODO: ##
-* ((TWEETAR SOBRE LIMITAÇAO ARROW FUNCTIONS))
-* Resolver issues mobile
 * Melhorar responsiveness para dispositivos 320px
+* Melhorar loading das fotos
 * Adicionar footer com copyright
 * Bloquear scroll do mapa
 * Migrar projecto para o github e refazer este README lol
@@ -23,6 +22,7 @@
 - Arranjar alojamento e domínio (site & email).
 * Internacionalização do site (EN - PT - GR) -> Render de conteúdos json
 * Limitar abusos do serviço de mail: implementar watchdog
+* Resolver issues mobile
 
 # == Projectos Futuros == #
 
