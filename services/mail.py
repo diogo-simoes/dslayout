@@ -4,10 +4,11 @@ import web
 import json
 import textwrap
 import os
+import sys
 import datetime
 
 class Watchdog:
-	def __init__(self, interval=15, max_requests=30):
+	def __init__(self, interval=15, max_requests=10):
 		self.interval = interval
 		self.max_requests = max_requests
 		self.mru = {}
@@ -57,7 +58,11 @@ confs = Bag()
 confs.mail_recipient = ''
 
 def init():
-	f = open(os.path.join(os.path.dirname(__file__), 'mail.config'), 'r')
+	app_path = os.path.dirname(__file__)
+	sys.path.append(app_path)
+	os.chdir(app_path)
+
+	f = open('mail.config', 'r')
 	for line in f:
 		prop = line.replace(' ','').rstrip().split('=')
 		if (prop[0] == 'smtp_server'):
@@ -73,7 +78,7 @@ def init():
 		elif (prop[0] == 'mail_recipient'):
 			confs.mail_recipient = prop[1]
 		else:
-			print'Unknown prop: ' + prop[0] + ' --> ' + prop[1]
+			print 'Unknown prop: ' + prop[0] + ' --> ' + prop[1]
 	f.close()
 	confs.wd = Watchdog();
 
