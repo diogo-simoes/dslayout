@@ -244,6 +244,9 @@ html,body {
 		background-image: url('../images/lisbon_sunset_02.jpg');
 		background-position: center center;
 	}
+	@include mobile {
+		background-size: auto 100%;
+	}
 
 	.i18n-bar {
 		height: 20px;
@@ -351,7 +354,7 @@ html,body {
 						font: 100 18px/18px $font_family;
 					}
 					@include mobile {
-						font: 100 14px/20px $font_family;
+						font: 300 14px/20px $font_family;
 					}
 				}
 				&:hover {
