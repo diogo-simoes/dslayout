@@ -255,7 +255,8 @@ html,body {
 			margin: 0 0 0 50%;
 			padding: 0 0 0 20px;
 			@include mobile {
-				margin: 0 0 0 40%;
+				margin: 0;
+				float: right;
 			}
 			.language-item {
 				margin-left: 20px;
@@ -264,6 +265,10 @@ html,body {
 				font: 100 12px/20px 'Comfortaa', sans-serif;
 				color: #ffffff;
 				@include clickable;
+				@include mobile {
+					font: 100 11px/14px 'Comfortaa', sans-serif;
+					margin: 0 10px 0 0;
+				}
 				&:first-child {
 					margin-left: 0;
 				}
@@ -273,6 +278,9 @@ html,body {
 				&.picked-lang {
 					font: 400 16px/20px 'Comfortaa', sans-serif;
 					cursor: default;
+					@include mobile {
+						font: 400 12px/14px 'Comfortaa', sans-serif;
+					}
 				} 
 			}
 		}
@@ -294,6 +302,7 @@ html,body {
 			}
 			@include mobile {
 				margin: 0;
+				height: 60px;
 			}
 			height: 100px;
 			text-align: center;
@@ -301,9 +310,13 @@ html,body {
 			.brand-logo {
 				height: 80px;
 				margin: 10px 0;
+				@include tablet {
+					height: 60px;
+					margin: 20px 0;
+				}
 				@include mobile {
-					padding-top: 13px;
-					width: 380px;
+					height: 40px;
+					margin: 10px 0;
 				}
 			}
 		}
@@ -320,9 +333,13 @@ html,body {
 				border: 1px solid #ffffff;
 				margin: 16px;
 				padding: 12px 24px;
-				@include mobile {
+				@include tablet {
 					padding: 9px 18px;
 					margin: 6px;
+				}
+				@include mobile {
+					padding: 3px 9px;
+					margin: 3px;
 				}
 				vertical-align: middle;
 				text-decoration: inherit;
@@ -330,8 +347,11 @@ html,body {
 					font: 100 24px/24px $font_family;
 					color: #ffffff;
 					vertical-align: middle;
-					@include mobile {
+					@include tablet {
 						font: 100 18px/18px $font_family;
+					}
+					@include mobile {
+						font: 100 14px/20px $font_family;
 					}
 				}
 				&:hover {
@@ -395,6 +415,11 @@ html,body {
 				height: 80px;
 				border-radius: 40px;
 				@include box-shadow(0px 0px 5px 0px rgba(0,0,0,0.65));
+				@include mobile {
+					width: 40px;
+					height: 40px;
+					border-radius: 20px;
+				}
 				.photo-frame {
 					height: inherit;
 					border-radius: inherit;
@@ -419,7 +444,7 @@ html,body {
 				width: 90%;
 				text-align: left;
 				margin: 0 auto;
-				padding: 25px 0;
+				padding: 15px 0;
 			}
 			.quotes{
 				display: inline-block;
@@ -429,7 +454,7 @@ html,body {
 				vertical-align: middle;
 				margin-right: 10px;
 				@include mobile {
-					font-size: 24px;
+					font-size: 20px;
 				}
 			}
 			.welcome-message {
@@ -438,7 +463,7 @@ html,body {
 				color: #ffffff;
 				vertical-align: bottom;
 				@include mobile {
-					font: italic 300 14px/24px $font_family;
+					font: italic 300 12px/20px $font_family;
 				}
 			}
 		}
