@@ -5,6 +5,11 @@ $( document ).ready( function () {
 
 	var i18n = new I18n();
 
+	$('body').hide();
+	setTimeout( function () {
+		$('body').show("fade", 400);
+	}, 200);
+
 	$( window ).on('scroll', function () {
 		var yPos = window.pageYOffset;
 		if (yPos > 200 && !$('#static-title-bar').is(':visible')) {
