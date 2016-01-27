@@ -8,6 +8,7 @@ $( document ).ready( function () {
 	$('body').hide();
 	setTimeout( function () {
 		$('body').show("fade", 400);
+		gmap_init();
 	}, 200);
 
 	$( window ).on('scroll', function () {
@@ -234,13 +235,13 @@ window.I18n.prototype.localize = function () {
 };
 
 // Google Maps Config
-google.maps.event.addDomListener(window, 'load', init);
+//google.maps.event.addDomListener(window, 'load', init);
 var map;
-function init() {
+function gmap_init() {
 	var mapOptions = {
 		center: new google.maps.LatLng(38.71300,-9.195500),
 		zoom: 12,
-		zoomControl: true,
+		zoomControl: false,
 		zoomControlOptions: {
 			style: google.maps.ZoomControlStyle.SMALL,
 		},
@@ -248,9 +249,9 @@ function init() {
 		mapTypeControl: false,
 		scaleControl: false,
 		scrollwheel: false,
-		panControl: true,
+		panControl: false,
 		streetViewControl: false,
-		draggable : true,
+		draggable : false,
 		overviewMapControl: false,
 		overviewMapControlOptions: {
 			opened: false,
