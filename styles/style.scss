@@ -154,7 +154,7 @@ html,body {
 					font: 200 15px/40px $font_family;
 				}
 				@include mobile {
-					font: 200 10px/40px $font_family;
+					font: 300 10px/40px $font_family;
 				}
 			}
 			&:hover {
@@ -941,6 +941,8 @@ html,body {
 		color: #bababa;
 		font: 100 12px/30px $font_family;
 		margin-left: 20px;
-		//text-shadow: 0 1px 0 #bebebe;
+		@include mobile {
+			font: 300 10px/30px $font_family;
+		}
 	}
 }
