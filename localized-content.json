@@ -178,6 +178,13 @@
 				"en" : "Try again",
 				"gr" : "Προσπαθήστε ξανά"
 			}
+		},
+		"socialmedia": {
+			"followme": {
+				"pt": "Segue-me!",
+				"en": "Follow me!",
+				"gr": "Ακολουθήστε με!"
+			}
 		}
 	}
 }

@@ -822,37 +822,38 @@ html,body {
 					max-width: 380px;
 					width: 100vw;
 				}
+				.social-media-message {
+					padding: 0 80px;
+					font: 500 16px $font_family;
+					margin: 20px 0 10px;
+					color: #656565;
+				}
 				.social-media-wrapper {
 					width: 100%;
 					height: 100%;
-					padding: 0 50px;
+					padding: 0 65px;
 					box-sizing: border-box;
 					.social-media-button {
 						@include clickable;
-						width: 80px;
-						height: 80px;
+						width: 40px;
+						height: 40px;
 						margin: 10px;
 						display:inline-block;
-						font-size: 32px;
-						line-height: 80px;
+						font-size: 40px;
+						line-height: 40px;
 						text-align: center;
-						background-color: #ffffff;
-						color: darken(#4479ac, 10%);
-						@include box-shadow(0px 0px 2px 0px darken(#4479ac, 10%) inset);
+						//background-color: #ffffff;
+						//color: darken(#4479ac, 10%);
+						color: lighten(#656565, 10%);
+						//@include box-shadow(0px 0px 2px 0px darken(#4479ac, 10%) inset);
 						&:hover {
-							background-color: darken(#4479ac, 10%);
-							color: #ffffff;
-							border-radius: 40px;
-							@include keyframes('roundify') {
-								from {border-radius: 0px;}
-								to {border-radius: 40px;}
+							color: darken(#4479ac, 10%);
+							background-color: #ffffff;
+							@include keyframes('warmup') {
+								from {color: lighten(#656565, 10%); background-color: none}
+								to {color: darken(#4479ac, 10%); background-color: #ffffff;}
 							}
-							@include keyframes('pulse') {
-								0% {background-color: darken(#4479ac, 10%)}
-								60% {background-color: lighten(#4479ac, 10%)}
-								100% {background-color: darken(#4479ac, 10%)}
-							}
-							@include animation(roundify ease-out 200ms, pulse ease-in 800ms);
+							@include animation(warmup ease-in 200ms);
 						}
 					}
 				}
