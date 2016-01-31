@@ -763,6 +763,7 @@ html,body {
 						background-color: lighten(#4479ac, 10%);
 						border: none;
 						padding: 6px 12px;
+						margin-bottom: 20px;
 						float: right;
 						@include clickable;
 						&:hover {
@@ -803,6 +804,7 @@ html,body {
 						background-color: lighten(#4479ac, 10%);
 						border: none;
 						padding: 6px 12px;
+						margin-bottom: 20px;
 						float: right;
 						@include clickable;
 						&:hover {
