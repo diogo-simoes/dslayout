@@ -110,7 +110,7 @@ class Mail:
 		_timestamp = mail_data['timestamp']
 		_subject = mail_data['subject']
 		_body = textwrap.dedent(
-			"""
+			u"""
 			=======================================================
 			* Email: {0}
 			* Name: {1}
