@@ -114,12 +114,12 @@ html,body {
 		.brand-logo {
 			height: inherit;
 			@include tablet {
-				width: 120px;
+				height: 20px;
 				padding: 5px 0;
 			}
 			@include mobile {
-				width: 120px;
-				padding: 5px 0;
+				height: 16px;
+				padding: 7px 0;
 			}
 		}
 	}
@@ -154,7 +154,7 @@ html,body {
 					font: 200 15px/40px $font_family;
 				}
 				@include mobile {
-					font: 200 15px/40px $font_family;
+					font: 200 10px/40px $font_family;
 				}
 			}
 			&:hover {
@@ -180,7 +180,7 @@ html,body {
 				padding: 12px 24px;
 				@include tablet {
 					width: 84px;
-					margin-left: -54px;
+					margin-left: -58px;
 				}
 				@include mobile {
 					margin-left: 0px;
@@ -190,7 +190,7 @@ html,body {
 					border-radius: 0;
 					border-top: 1px solid rgba(#0f1a24, 0.20);
 					text-align: center;
-					padding: 12px 0;
+					padding: 8px 0;
 				}
 				.language-picker {
 					padding: 0;
@@ -204,6 +204,11 @@ html,body {
 						@include clickable;
 						@include tablet {
 							margin-left: 0;
+							padding: 2px 0;
+							font: 100 11px/20px 'Comfortaa', sans-serif;
+						}
+						@include mobile {
+							font: 100 8px/12px 'Comfortaa', sans-serif;
 						}
 						&:first-child {
 							margin-left: 0;
@@ -215,6 +220,12 @@ html,body {
 						&.picked-lang {
 							font: 400 16px/20px 'Comfortaa', sans-serif;
 							cursor: default;
+							@include tablet {
+								font: 100 14px/20px 'Comfortaa', sans-serif;
+							}
+							@include mobile {
+								font: 100 11px/12px 'Comfortaa', sans-serif;
+							}
 						} 
 					}
 				}
@@ -242,7 +253,8 @@ html,body {
 }
 
 .intro-section {
-	height: 100vh;
+	height:100vh;
+	min-height: 480px;
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-image: url('../images/lisbon_sunset_01.jpg');
@@ -254,6 +266,9 @@ html,body {
 		background-position: center center;
 	}
 	@include mobile {
+		background-size: auto 100%;
+	}
+	@include squeezed {
 		background-size: auto 100%;
 	}
 
@@ -270,6 +285,10 @@ html,body {
 				margin: 0;
 				float: right;
 			}
+			@include squeezed {
+				margin: 0;
+				float: right;
+			}
 			.language-item {
 				margin-left: 20px;
 				list-style: none;
@@ -278,6 +297,10 @@ html,body {
 				color: #ffffff;
 				@include clickable;
 				@include mobile {
+					font: 100 8px/14px 'Comfortaa', sans-serif;
+					margin: 0 10px 0 0;
+				}
+				@include squeezed {
 					font: 100 8px/14px 'Comfortaa', sans-serif;
 					margin: 0 10px 0 0;
 				}
@@ -291,6 +314,9 @@ html,body {
 					font: 400 16px/20px 'Comfortaa', sans-serif;
 					cursor: default;
 					@include mobile {
+						font: 400 9px/14px 'Comfortaa', sans-serif;
+					}
+					@include squeezed {
 						font: 400 9px/14px 'Comfortaa', sans-serif;
 					}
 				} 
@@ -316,6 +342,10 @@ html,body {
 				margin: 0;
 				height: 60px;
 			}
+			@include squeezed {
+				margin: 0;
+				height: 60px;
+			}
 			height: 100px;
 			text-align: center;
 			vertical-align: middle;
@@ -327,6 +357,10 @@ html,body {
 					margin: 20px 0;
 				}
 				@include mobile {
+					height: 40px;
+					margin: 10px 0;
+				}
+				@include squeezed {
 					height: 40px;
 					margin: 10px 0;
 				}
@@ -353,6 +387,10 @@ html,body {
 					padding: 3px 9px;
 					margin: 3px;
 				}
+				@include squeezed {
+					padding: 3px 9px;
+					margin: 3px;
+				}
 				vertical-align: middle;
 				text-decoration: inherit;
 				.menu-label {
@@ -363,6 +401,9 @@ html,body {
 						font: 100 18px/18px $font_family;
 					}
 					@include mobile {
+						font: 300 14px/20px $font_family;
+					}
+					@include squeezed {
 						font: 300 14px/20px $font_family;
 					}
 				}
@@ -398,6 +439,11 @@ html,body {
 			left: 0;
 			margin: 0;
 		}
+		@include squeezed {
+			position: relative;
+			bottom: 0;
+			margin-top: 100px
+		}
 		.welcome-area {
 			width: 100%;
 			margin: 0 auto;
@@ -415,6 +461,11 @@ html,body {
 				margin: 0 auto;
 				padding-top: 1em;
 			}
+			@include squeezed {
+				display: block;
+				margin: 0 auto;
+				padding-top: 1em;
+			}
 			width: 25%;
 			vertical-align: middle;
 			.photo {
@@ -428,6 +479,11 @@ html,body {
 				border-radius: 40px;
 				@include box-shadow(0px 0px 5px 0px rgba(0,0,0,0.65));
 				@include mobile {
+					width: 40px;
+					height: 40px;
+					border-radius: 20px;
+				}
+				@include squeezed {
 					width: 40px;
 					height: 40px;
 					border-radius: 20px;
@@ -458,6 +514,13 @@ html,body {
 				margin: 0 auto;
 				padding: 15px 0;
 			}
+			@include squeezed {
+				display: block;
+				width: 90%;
+				text-align: left;
+				margin: 0 auto;
+				padding: 15px 0;
+			}
 			.quotes{
 				display: inline-block;
 				font-style: italic;
@@ -468,6 +531,9 @@ html,body {
 				@include mobile {
 					font-size: 20px;
 				}
+				@include squeezed {
+					font-size: 20px;
+				}
 			}
 			.welcome-message {
 				display: inline;
@@ -475,6 +541,9 @@ html,body {
 				color: #ffffff;
 				vertical-align: bottom;
 				@include mobile {
+					font: italic 300 12px/20px $font_family;
+				}
+				@include squeezed {
 					font: italic 300 12px/20px $font_family;
 				}
 			}
@@ -845,7 +914,7 @@ html,body {
 						//background-color: #ffffff;
 						//color: darken(#4479ac, 10%);
 						color: lighten(#656565, 10%);
-						//@include box-shadow(0px 0px 2px 0px darken(#4479ac, 10%) inset);
+						text-shadow: 0 0 1px #656565;
 						&:hover {
 							color: darken(#4479ac, 10%);
 							background-color: #ffffff;
