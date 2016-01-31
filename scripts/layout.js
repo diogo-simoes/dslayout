@@ -71,11 +71,11 @@ $( document ).ready( function () {
 	});
 
 	$('#email-menu').click( function () {
-		changeContactsPanelContent('email-menu',-400);
+		changeContactsPanelContent('email-menu', (-1 * $('.contacts-profile').outerWidth()));
 	});
 
 	$('#social-media-menu').click( function () {
-		changeContactsPanelContent('social-media-menu',-800);
+		changeContactsPanelContent('social-media-menu',(-2 * $('.contacts-profile').outerWidth()));
 	});
 
 	$('#name-textfield').on('focus', function () {
