@@ -2,9 +2,9 @@
 
 ## TODO: ##
 * Melhorar responsiveness para dispositivos 320px
-* Melhorar loading das fotos
-* Adicionar footer com copyright
-* Bloquear scroll do mapa
+* Implementar mecanismo de slides: full-screen home + full-screen contacts (o mapa pode não ocupar toda a área).
+* Eventos de scroll ou swipe fazem saltar entre slides.
+* Corrigir static navbar
 * Migrar projecto para o github e refazer este README lol
 + Implementar blog no site com notificação (+sinapse) no Twitter e/ou LinkedIn.
 
@@ -23,6 +23,9 @@
 * Internacionalização do site (EN - PT - GR) -> Render de conteúdos json
 * Limitar abusos do serviço de mail: implementar watchdog
 * Resolver issues mobile
+* Melhorar loading das fotos
+* Adicionar footer com copyright
+* Bloquear scroll do mapa
 
 # == Projectos Futuros == #
 
