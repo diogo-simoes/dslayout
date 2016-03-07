@@ -1,12 +1,8 @@
 # == Projecto Site diogo-simoes.com == #
 
 ## TODO: ##
-* Melhorar responsiveness para dispositivos 320px
-* Implementar mecanismo de slides: full-screen home + full-screen contacts (o mapa pode não ocupar toda a área).
-* Eventos de scroll ou swipe fazem saltar entre slides.
-* Corrigir static navbar
-* Migrar projecto para o github e refazer este README lol
-+ Implementar blog no site com notificação (+sinapse) no Twitter e/ou LinkedIn.
+* Implementar blog no site com notificação (+sinapse) no Twitter e/ou LinkedIn.
+- Migrar projecto para o github e refazer este README lol
 
 ## DONE: ##
 * Desenhar contacts: pessoais(mail, tlm, addr, skype) + sociais(twitter, linkedin, github, bitbucket)
@@ -26,9 +22,15 @@
 * Melhorar loading das fotos
 * Adicionar footer com copyright
 * Bloquear scroll do mapa
+* Melhorar responsiveness para dispositivos 320px
+* Implementar mecanismo de slides: full-screen home + full-screen contacts (o mapa pode não ocupar toda a área).
+* <s>Eventos de scroll ou swipe fazem saltar entre slides.</s>
+* Corrigir static navbar
+* Configurar Disqus
+* Verificar processo deployment Nikola
+* Melhorar tema esteticamente
 
 # == Projectos Futuros == #
 
 * Transformar I18n num plugin the jQuery;
-* Adicionar suporte para fotos no component timeline
 - Criar um engine de TCG.
