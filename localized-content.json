@@ -131,7 +131,7 @@
 			"body" : {
 				"pt" : "A sua mensagem...",
 				"en" : "Your message...",
-				"gr" : "Μύνημα"
+				"gr" : "Μήνυμα"
 			},
 			"sendbutton" : {
 				"pt" : "Enviar mensagem",
