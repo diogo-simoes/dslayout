@@ -1,5 +1,5 @@
 
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,600);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,300,700&subset=greek,latin);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&subset=latin,greek);
 
@@ -35,6 +35,13 @@ $font_family: 'Work Sans', 'Roboto', sans-serif;
  	-moz-animation:    $animations;
  	-o-animation:      $animations;
  	animation:         $animations;
+}
+
+@mixin transition ($transitions...) {
+	-webkit-transition: $transitions;
+	-moz-transition:    $transitions;
+	-o-transition:      $transitions;
+	transition:         $transitions;
 }
 
 @mixin photo-gradient ($base_color) {
@@ -269,7 +276,17 @@ html,body {
 		background-size: auto 100%;
 	}
 	@include squeezed {
-		background-size: auto 100%;
+		background-size: 100% 100%;
+	}
+
+	.intro-section-filter {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.4);
+		@include desktop {
+			background-color: rgba(0,0,0,0.6);
+		}
 	}
 
 	.i18n-bar {
@@ -376,7 +393,7 @@ html,body {
 			}
 			.menu-item {
 				display: inline-block;
-				border: 1px solid #ffffff;
+				border: 0.1rem solid #ffffff;
 				margin: 16px;
 				padding: 12px 24px;
 				@include tablet {
@@ -394,17 +411,17 @@ html,body {
 				vertical-align: middle;
 				text-decoration: inherit;
 				.menu-label {
-					font: 100 24px/24px $font_family;
+					font: 200 24px/24px $font_family;
 					color: #ffffff;
 					vertical-align: middle;
 					@include tablet {
-						font: 100 18px/18px $font_family;
+						font: 200 18px/18px $font_family;
 					}
 					@include mobile {
-						font: 300 14px/20px $font_family;
+						font: 300 13px/20px $font_family;
 					}
 					@include squeezed {
-						font: 300 14px/20px $font_family;
+						font: 300 13px/20px $font_family;
 					}
 				}
 				&:hover {
@@ -537,14 +554,14 @@ html,body {
 			}
 			.welcome-message {
 				display: inline;
-				font: italic 300 16px/26px $font_family;
+				font: italic 300 18px/26px $font_family;
 				color: #ffffff;
 				vertical-align: bottom;
 				@include mobile {
-					font: italic 300 12px/20px $font_family;
+					font: italic 400 13px/20px $font_family;
 				}
 				@include squeezed {
-					font: italic 300 12px/20px $font_family;
+					font: italic 400 13px/20px $font_family;
 				}
 			}
 		}
@@ -591,6 +608,7 @@ html,body {
 			max-width: 100vw;
 			left: 0;
 			margin: -211px auto 0 auto;
+			border: none;
 		}
 		@include squeezed {
 			top: -480px;
@@ -902,27 +920,56 @@ html,body {
 					height: 100%;
 					padding: 0 65px;
 					box-sizing: border-box;
-					.social-media-button {
+					.social-media-button .fa {
 						@include clickable;
-						width: 40px;
-						height: 40px;
+						width: 30px;
+						height: 30px;
 						margin: 10px;
-						display:inline-block;
-						font-size: 40px;
-						line-height: 40px;
+						display: inline-block;
+						font-size: 30px;
+						line-height: 30px;
 						text-align: center;
 						//background-color: #ffffff;
 						//color: darken(#4479ac, 10%);
-						color: lighten(#656565, 10%);
-						text-shadow: 0 0 1px #656565;
+						color: darken(#656565, 10%);
+						//text-shadow: 0 0 1px #656565;
+						@include transition(color 1s ease-out, text-shadow 1s ease-out);
 						&:hover {
-							color: darken(#4479ac, 10%);
-							background-color: #ffffff;
-							@include keyframes('warmup') {
-								from {color: lighten(#656565, 10%); background-color: none}
-								to {color: darken(#4479ac, 10%); background-color: #ffffff;}
-							}
-							@include animation(warmup ease-in 200ms);
+							@include transition(none);
+						}
+					}
+					.fa-twitter {
+						&:hover {
+							color: #157fd1;
+							text-shadow: 0 0 10px #157fd1;
+						}
+					}
+
+					.fa-codepen {
+						&:hover {
+							color: #111111;
+							text-shadow: 0 0 10px #808080;
+						}
+					}
+
+					.fa-linkedin {
+						&:hover {
+							color: #007ab3;
+							text-shadow: 0 0 10px #007ab3;
+						}
+					}
+
+					.fa-github {
+						&:hover {
+							color: #5c0a0a;
+							text-shadow: 0 0 10px #b81414;
+						}
+					}
+
+					.fa-bitbucket {
+						&:hover {
+							color: #79a6d2;
+							text-shadow: 0 0 10px #79a6d2;
 						}
 					}
 				}
