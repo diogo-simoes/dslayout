@@ -1,11 +1,10 @@
 
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,300,700&subset=greek,latin);
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&subset=latin,greek);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,200italic,300,300italic,400italic,500,600,700,800,900);
 
 @import "timeline";
 
-$font_family: 'Work Sans', 'Roboto', sans-serif;
+$font_family: 'Raleway', 'Comfortaa', sans-serif;
 
 @mixin clickable {
 	cursor: pointer;
@@ -924,15 +923,15 @@ html,body {
 						@include clickable;
 						width: 30px;
 						height: 30px;
-						margin: 10px;
+						margin: 12px;
+						padding: 11px;
+						border-radius: 26px;
 						display: inline-block;
-						font-size: 30px;
+						font-size: 28px;
 						line-height: 30px;
 						text-align: center;
-						//background-color: #ffffff;
-						//color: darken(#4479ac, 10%);
-						color: darken(#656565, 10%);
-						//text-shadow: 0 0 1px #656565;
+						color: #e6e6e6;
+						background-color: #656565;
 						@include transition(color 1s ease-out, text-shadow 1s ease-out);
 						&:hover {
 							@include transition(none);
@@ -940,36 +939,36 @@ html,body {
 					}
 					.fa-twitter {
 						&:hover {
-							color: #157fd1;
-							text-shadow: 0 0 10px #157fd1;
+							color: #2e99ea;
+							text-shadow: 2px 2px 1px #111111;
 						}
 					}
 
 					.fa-codepen {
 						&:hover {
-							color: #111111;
-							text-shadow: 0 0 10px #808080;
+							color: #ffffff;
+							text-shadow: 2px 2px 1px #111111;
 						}
 					}
 
 					.fa-linkedin {
 						&:hover {
-							color: #007ab3;
-							text-shadow: 0 0 10px #007ab3;
+							color: #39f;
+							text-shadow: 2px 2px 1px #111111;
 						}
 					}
 
 					.fa-github {
 						&:hover {
-							color: #5c0a0a;
-							text-shadow: 0 0 10px #b81414;
+							color: #eb4747;
+							text-shadow: 2px 2px 1px #111111;
 						}
 					}
 
 					.fa-bitbucket {
 						&:hover {
-							color: #79a6d2;
-							text-shadow: 0 0 10px #79a6d2;
+							color: #80bfff;
+							text-shadow: 2px 2px 1px #111111;
 						}
 					}
 				}
