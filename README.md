@@ -1,36 +1,11 @@
-# == Projecto Site diogo-simoes.com == #
+# diogosimoes.com #
 
-## TODO: ##
-* Implementar blog no site com notificação (+sinapse) no Twitter e/ou LinkedIn.
-- Migrar projecto para o github e refazer este README lol
+###Site structure & layout###
+###Points of interest:###
 
-## DONE: ##
-* Desenhar contacts: pessoais(mail, tlm, addr, skype) + sociais(twitter, linkedin, github, bitbucket)
-* Desenhar home.
-* Implementar CV interactivo (formato timeline)
-* Implementar title bar flutuante
-+ Desenhar Layout (fluido e adaptavel) site: home, blog(empty), contacts, lab(empty)
-- Retocar logo spark (shades interiores)
-* Definicao dos conteudos a integrar na versao 1.
-* Motor de envio email (1º implementar e testar serviço; 2º refinar API e implementar consumidor; 3º refinar UI)
-- Criar conta Twitter
-- Criar nova conta Skype -> migrar conta Skype
-- Arranjar alojamento e domínio (site & email).
-* Internacionalização do site (EN - PT - GR) -> Render de conteúdos json
-* Limitar abusos do serviço de mail: implementar watchdog
-* Resolver issues mobile
-* Melhorar loading das fotos
-* Adicionar footer com copyright
-* Bloquear scroll do mapa
-* Melhorar responsiveness para dispositivos 320px
-* Implementar mecanismo de slides: full-screen home + full-screen contacts (o mapa pode não ocupar toda a área).
-* <s>Eventos de scroll ou swipe fazem saltar entre slides.</s>
-* Corrigir static navbar
-* Configurar Disqus
-* Verificar processo deployment Nikola
-* Melhorar tema esteticamente
+1. The *Layout*: **index.html** (check the i18n-data attributes)
+2. The *Sassiness*: **styles/style.scss** (follows layout semantics; fully responsive and fluid)
+3. The *Logic*: **scripts/layout.js** (the I18n object is worth a look; mini mail app)
+4. The *Service*: **services/mail.py** (not much, but it hisses and bites)
 
-# == Projectos Futuros == #
 
-* Transformar I18n num plugin the jQuery;
-- Criar um engine de TCG.
