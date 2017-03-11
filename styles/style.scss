@@ -263,13 +263,11 @@ html,body {
 	min-height: 480px;
 	background-position: center top;
 	background-repeat: no-repeat;
-	background-image: url('../images/lisbon_sunset_01.jpg');
-	@media screen and (min-height: 1210px) {
-		background-size: auto 100%;
-	}
+	background-image: url('../images/bristol-balloons.jpg');
 	@include desktop {
-		background-image: url('../images/lisbon_sunset_02.jpg');
+		background-image: url('../images/Bristol-Temple-Meads.jpg');
 		background-position: center center;
+		background-size: 120%;
 	}
 	@include mobile {
 		background-size: auto 100%;
