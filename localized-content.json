@@ -22,10 +22,10 @@
 		}
 	},
 	"welcome-message" : {
-		"pt" : "Olá e sê bem-vindo ao meu retiro na web. Eu chamo-me Diogo e sou um engenheiro de front-end web a viver em Lisboa, Portugal. Sou apaixonado por engenharia criativa e por experiências ricas de interacção e visualização. Visita os meus perfis e deixa uma mensagem ou comentário. A interacção é bem-vinda!",
-		"en" : "Hello and welcome to my little corner on the web. My name is Diogo and I am a web front-end engineer from Lisbon, Portugal. I'm passionate for creative engineering and rich visual and interactive experiences. Visit my profiles, send me a message or drop a comment. Interaction is welcome. Cheers!",
-		"gr" : "Καλωσήρθατε στη σελίδα μου. Ονομάζομαι Diogo, είμαι web front-end δημιουργός λογισμικού και ζω στη Λισαβόνα της Πορτογαλίας. Έχω πάθος με τη δημιουργική τεχνολογία και την εφαρμογή της σε οπτικά πολυσύνθετες διαδραστικές εμπειρίες. Μπορείτε να επισκεφτείτε τα προφίλ μου, να μου αφήσετε ένα μήνυμα ή να κάνετε τα σχόλιά σας. Είστε ευπρόσδεκτοι!"
-	},
+		"pt" : "Olá. Eu chamo-me Diogo e sou um engenheiro de software a viver em Bristol, no Reino Unido. A experiência e os conhecimentos que tenho são em technologias web. Aquilo de que eu mais gosto são jogos. Naturalmente, aquilo que faço na vida é desenvolver back-ends para jogos. Dá uma vista de olhos no blog ou deixa-me uma mensagem. Até já!",
+		"en" : "Hello and welcome! My name is Diogo and I am a software engineer living in Bristol, UK. Web tech is what I know. Games is what I love. Cloud back-ends for games is what I do. You can get my contacts below, drop me a line or check my blog. Just make yourself at home. Cheerio!",
+		"gr" : "Καλωσήρθατε! Είμαι ο Diogo, είμαι δημιουργός λογισμικού και ζω στο Μπρίστολ της Αγγλίας. Το γνωστικό μου αντικείμενο είναι οι τεχνολογίες διαδικτύου. Το πάθος μου, το gaming. Και η δουλειά μου, τα back-ends για gaming. Μπορείτε να επισκεφτείτε το blog μου ή να μου στείλετε μήνυμα. Γειά χαρά!"
+		},
 	"timeline" : {
 		"card001" : {
 			"flag" : {
@@ -99,27 +99,27 @@
 	"contacts" : {
 		"emailform" : {
 			"intro" : {
-				"pt" : "Deixe a sua mensagem.",
+				"pt" : "Diz de tua justiça.",
 				"en" : "Feel free to say hi.",
-				"gr" : "Αφήστε το μήνυμά σας"
+				"gr" : "Αφήστε το μήνυμά σας."
 			},
 			"name" : {
-				"pt" : "O seu nome",
+				"pt" : "O teu nome",
 				"en" : "Your name",
 				"gr" : "Το όνομά σας"
 			},
 			"name-validator" : {
-				"pt" : "O seu nome - campo obrigatório",
+				"pt" : "O teu nome - campo obrigatório",
 				"en" : "Your name - required field",
 				"gr" : "Το όνομά σας - υποχρεωτικό πεδίο"
 			},
 			"email" : {
-				"pt" : "O seu email",
+				"pt" : "O teu email",
 				"en" : "Your email",
 				"gr" : "Το email σας"
 			},
 			"email-validator" : {
-				"pt" : "O seu email - formato: endereço@dominio.tld",
+				"pt" : "O teu email - formato: endereço@dominio.tld",
 				"en" : "Your email - required: address@domain.tld",
 				"gr" : "Το email σας - υποχρεωτικό: address@domain.tld"
 			},
@@ -129,7 +129,7 @@
 				"gr" : "Θέμα"
 			},
 			"body" : {
-				"pt" : "A sua mensagem...",
+				"pt" : "A tua mensagem...",
 				"en" : "Your message...",
 				"gr" : "Μήνυμα"
 			},
@@ -144,7 +144,7 @@
 				"gr" : "Αποστέλλεται"
 			},
 			"success" : {
-				"pt" : "A sua mensagem foi enviada.",
+				"pt" : "A tua mensagem foi enviada.",
 				"en" : "Your message was successfully sent.",
 				"gr" : "Το μήνυμα εστάλη"
 			},
@@ -159,17 +159,17 @@
 				"gr" : "Αποστολή νέου μηνύματος"
 			},
 			"failed" : {
-				"pt" : "A sua mensagem não pôde ser enviada.",
+				"pt" : "A tua mensagem não pôde ser enviada.",
 				"en" : "Your message could not be sent.",
 				"gr" : "Το μήνυμα δεν εστάλη."
 			},
 			"tryagainmsg" : {
-				"pt" : "Tente de novo mais tarde ou...",
+				"pt" : "Tenta de novo mais tarde ou...",
 				"en" : "Try again later or...",
 				"gr" : "Παρακαλώ προσπαθήστε ξανά ή..."
 			},
 			"manualsend" : {
-				"pt" : "envie usando o seu cliente de email habitual.",
+				"pt" : "envia usando o teu cliente de email habitual.",
 				"en" : "send it using your regular e-mail client.",
 				"gr" : "στείλτε το χρησιμοποιώντας τον πελάτη ηλεκτρονικού ταχυδρομείου σας"
 			},

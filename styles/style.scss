@@ -1,6 +1,6 @@
 
-@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,300,700&subset=greek,latin);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,200italic,300,300italic,400italic,500,600,700,800,900);
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,300,700&subset=greek');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,100,200,200italic,300,300italic,400italic,500,600,700,800,900');
 
 @import "timeline";
 
@@ -263,19 +263,15 @@ html,body {
 	min-height: 480px;
 	background-position: center top;
 	background-repeat: no-repeat;
-	background-image: url('../images/lisbon_sunset_01.jpg');
-	@media screen and (min-height: 1210px) {
-		background-size: auto 100%;
-	}
+	background-image: url('../images/bristol-balloons.jpg');
+	background-size: auto 100%;
 	@include desktop {
-		background-image: url('../images/lisbon_sunset_02.jpg');
+		//background-image: url('../images/Bristol-Temple-Meads.jpg');
 		background-position: center center;
-	}
-	@include mobile {
-		background-size: auto 100%;
+		background-size: 100%;
 	}
 	@include squeezed {
-		background-size: 100% 100%;
+		background-size: 100% auto;
 	}
 
 	.intro-section-filter {

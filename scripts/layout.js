@@ -239,8 +239,8 @@ window.I18n.prototype.localize = function () {
 var map;
 function gmap_init() {
 	var mapOptions = {
-		center: new google.maps.LatLng(38.71300,-9.195500),
-		zoom: 12,
+		center: new google.maps.LatLng(51.449296, -2.601340),
+		zoom: 16,
 		zoomControl: false,
 		zoomControlOptions: {
 			style: google.maps.ZoomControlStyle.SMALL,
@@ -290,7 +290,7 @@ function gmap_init() {
 	var mapElement = document.getElementById('contacts-map');
 	var map = new google.maps.Map(mapElement, mapOptions);
 	var locations = [
-			['I\'m here!', 'undefined', 'undefined', 'undefined', 'undefined', 38.725953883962974, -9.138895203041138, 'images/mapicon58.png']
+			['I\'m here!', 'undefined', 'undefined', 'undefined', 'undefined', 51.4502135,-2.5948814, 'images/mapicon58.png']
 	];
 	for (i = 0; i < locations.length; i++) {
 		if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
