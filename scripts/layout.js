@@ -290,7 +290,7 @@ function gmap_init() {
 	var mapElement = document.getElementById('contacts-map');
 	var map = new google.maps.Map(mapElement, mapOptions);
 	var locations = [
-			['I\'m here!', 'undefined', 'undefined', 'undefined', 'undefined', 51.4470135,-2.5968814, 'images/mapicon58.png']
+			['I\'m here!', 'undefined', 'undefined', 'undefined', 'undefined', 51.4502135,-2.5948814, 'images/mapicon58.png']
 	];
 	for (i = 0; i < locations.length; i++) {
 		if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
