@@ -264,14 +264,12 @@ html,body {
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-image: url('../images/bristol-balloons.jpg');
-	background-size: auto 100%;
-	@include desktop {
-		//background-image: url('../images/Bristol-Temple-Meads.jpg');
-		background-position: center center;
-		background-size: 100%;
-	}
-	@include squeezed {
+	background-size: auto;
+	@media screen and (min-aspect-ratio: 3000/2008) {
 		background-size: 100% auto;
+	}
+	@media screen and (max-aspect-ratio: 3000/2008) {
+		background-size: auto 100%;
 	}
 
 	.intro-section-filter {
@@ -279,9 +277,6 @@ html,body {
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0,0,0,0.4);
-		@include desktop {
-			background-color: rgba(0,0,0,0.6);
-		}
 	}
 
 	.i18n-bar {
