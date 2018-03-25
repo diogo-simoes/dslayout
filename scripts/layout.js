@@ -118,7 +118,7 @@ $( document ).ready( function () {
 		var message = $('#contact-textarea').val();
 		$.ajax({
 			method: 'POST',
-			url: 'http://localhost:8080/mailservice',
+			url: 'https://services.diogosimoes.com/mailservice',
 			data: JSON.stringify({'name': name, 'email': email, 'timestamp': timestamp, 'subject': subject, 'message': message}),
 			dataType: 'json'
 		}).done( function (msg) {
